@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -10,7 +9,6 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
-
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 

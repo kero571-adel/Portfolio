@@ -79,18 +79,7 @@ export default function HeroDesktop() {
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            {/* Hello Badge
-              <motion.div variants={itemVariants} className="inline-block">
-                <motion.div
-                  className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 w-fit"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <span className="text-2xl">👋</span>
-                  <span className="text-slate-300 font-medium">Hello!</span>
-                </motion.div>
-              </motion.div> */}
-
-            {/* Main Heading */}
+            
             <motion.div variants={itemVariants} className="space-y-2">
               <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="text-slate-100">I'm </span>

@@ -58,7 +58,7 @@ export default function HeroMobile() {
   };
 
   return (
-    <section className="lg:hidden w-full h-screen flex flex-col items-center text-center relative overflow-hidden pt-20">
+    <section className="lg:hidden w-full h-[100dvh] flex flex-col items-center text-center relative overflow-hidden pt-20">
       <motion.div
         variants={containerVariants}
         initial="hidden"
