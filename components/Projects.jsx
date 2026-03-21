@@ -6,46 +6,6 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
-      id: 1,
-      title: "Safarni – Travel Booking Platform",
-      description:
-        "Advanced travel booking platform with full flight booking flow, secure payment system, and dynamic state management using Redux Toolkit.",
-      image: "✈️",
-      tags: ["React", "Redux Toolkit", "Tailwind CSS", "MUI"],
-      category: "frontend",
-      link: "#",
-      github: "#",
-      gradient: "from-blue-500 to-cyan-500",
-      features: [
-        "Flight Booking & Reservation System",
-        "Secure Payment Integration",
-        "Destinations & Favorites System",
-        "Compare Flights Feature",
-        "REST API Integration",
-      ],
-    },
-
-    {
-      id: 2,
-      title: "Cure – Medical Consultation Platform",
-      description:
-        "Medical consultation platform with full authentication system, protected routes, and real-time doctor & appointment management.",
-      image: "🩺",
-      tags: ["React", "TypeScript", "Tailwind", "ShadCN UI"],
-      category: "frontend",
-      link: "#",
-      github: "#",
-      gradient: "from-purple-500 to-pink-500",
-      features: [
-        "Authentication System (Login/Register)",
-        "Protected Routes",
-        "Doctor Profiles & Data",
-        "Appointment Booking System",
-        "API Integration",
-      ],
-    },
-
-    {
       id: 3,
       title: "StudyTrack – Study Management Dashboard",
       description:
@@ -156,6 +116,45 @@ export default function Projects() {
         "Database Design (Prisma + MySQL)",
         "SSR & CSR using Next.js",
         "REST API Routes",
+      ],
+    },
+    {
+      id: 1,
+      title: "Safarni – Travel Booking Platform",
+      description:
+        "Advanced travel booking platform with full flight booking flow, secure payment system, and dynamic state management using Redux Toolkit.",
+      image: "✈️",
+      tags: ["React", "Redux Toolkit", "Tailwind CSS", "MUI"],
+      category: "frontend",
+      link: "#",
+      github: "#",
+      gradient: "from-blue-500 to-cyan-500",
+      features: [
+        "Flight Booking & Reservation System",
+        "Secure Payment Integration",
+        "Destinations & Favorites System",
+        "Compare Flights Feature",
+        "REST API Integration",
+      ],
+    },
+
+    {
+      id: 2,
+      title: "Cure – Medical Consultation Platform",
+      description:
+        "Medical consultation platform with full authentication system, protected routes, and real-time doctor & appointment management.",
+      image: "🩺",
+      tags: ["React", "TypeScript", "Tailwind", "ShadCN UI"],
+      category: "frontend",
+      link: "#",
+      github: "#",
+      gradient: "from-purple-500 to-pink-500",
+      features: [
+        "Authentication System (Login/Register)",
+        "Protected Routes",
+        "Doctor Profiles & Data",
+        "Appointment Booking System",
+        "API Integration",
       ],
     },
   ];
@@ -270,31 +269,33 @@ export default function Projects() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <motion.a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} rounded-lg text-white font-semibold transition-all duration-300`}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Live Demo
-                    <motion.svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      animate={{ x: [0, 3, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
+                  {project.id !== 1 && project.id !== 2 && (
+                    <motion.a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} rounded-lg text-white font-semibold transition-all duration-300`}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </motion.svg>
-                  </motion.a>
+                      Live Demo
+                      <motion.svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        animate={{ x: [0, 3, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </motion.svg>
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
