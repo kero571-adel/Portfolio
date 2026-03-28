@@ -99,7 +99,26 @@ export default function Projects() {
         "API Integration with Axios",
       ],
     },
-
+    {
+      id: 9,
+      title: "Pharmacy Landing Page",
+      description:
+      "A conversion-focused pharmacy landing page built with Next.js, tailored for a pharmacy chain in Upper Egypt. Features Arabic RTL support, structured SEO data, and clear service presentation including 24/7 delivery and medical consultations.",
+      image: "💊",
+      tags: ["Next.js", "Tailwind CSS", "SEO", "RTL", "Landing Page"],
+      category: "frontend",
+      link: "https://ourpharmacies.vercel.app/",
+      github: "#",
+      gradient: "from-green-500 to-teal-500",
+      features: [
+        "Modern Landing Page Design",
+        "Arabic RTL Localization",
+        "Services Showcase Sections",
+        "SEO Optimization (Meta + JSON-LD)",
+        "Responsive UI Across Devices",
+        "WhatsApp Quick Contact Integration",
+      ],
+    },
     {
       id: 8,
       title: "Full-Stack Next.js App",
@@ -126,7 +145,7 @@ export default function Projects() {
       image: "✈️",
       tags: ["React", "Redux Toolkit", "Tailwind CSS", "MUI"],
       category: "frontend",
-      link: "#",
+      link: "https://r7-react-safarni.vercel.app/",
       github: "#",
       gradient: "from-blue-500 to-cyan-500",
       features: [
@@ -138,25 +157,25 @@ export default function Projects() {
       ],
     },
 
-    {
-      id: 2,
-      title: "Cure – Medical Consultation Platform",
-      description:
-        "Medical consultation platform with full authentication system, protected routes, and real-time doctor & appointment management.",
-      image: "🩺",
-      tags: ["React", "TypeScript", "Tailwind", "ShadCN UI"],
-      category: "frontend",
-      link: "#",
-      github: "#",
-      gradient: "from-purple-500 to-pink-500",
-      features: [
-        "Authentication System (Login/Register)",
-        "Protected Routes",
-        "Doctor Profiles & Data",
-        "Appointment Booking System",
-        "API Integration",
-      ],
-    },
+    // {
+    //   id: 2,
+    //   title: "Cure – Medical Consultation Platform",
+    //   description:
+    //     "Medical consultation platform with full authentication system, protected routes, and real-time doctor & appointment management.",
+    //   image: "🩺",
+    //   tags: ["React", "TypeScript", "Tailwind", "ShadCN UI"],
+    //   category: "frontend",
+    //   link: "#",
+    //   github: "#",
+    //   gradient: "from-purple-500 to-pink-500",
+    //   features: [
+    //     "Authentication System (Login/Register)",
+    //     "Protected Routes",
+    //     "Doctor Profiles & Data",
+    //     "Appointment Booking System",
+    //     "API Integration",
+    //   ],
+    // },
   ];
 
   const containerVariants = {
@@ -269,7 +288,7 @@ export default function Projects() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  {project.id !== 1 && project.id !== 2 && (
+                  { project.id !== 8 && (
                     <motion.a
                       href={project.link}
                       target="_blank"

@@ -141,7 +141,7 @@ export default function HeroMobile() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="absolute bottom-12 flex items-center p-1 border border-white/60 bg-transparent backdrop-blur-md rounded-full z-40"
+          className="absolute bottom-12 flex items-center p-1 border border-white/60 bg-transparent backdrop-blur-md rounded-full z-70"
         >
           <motion.button
             onClick={handlePortfolioClick}
