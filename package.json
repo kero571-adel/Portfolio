@@ -17,6 +17,7 @@
   "dependencies": {
     "framer-motion": "^12.37.0",
     "next": "^16.1.6",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^8.0.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
