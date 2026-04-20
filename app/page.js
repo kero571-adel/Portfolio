@@ -9,6 +9,8 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import ScrollToTop from "@/components/ScrollToTop"; // 👈 استيراد المكون الجديد
+
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative">
+    <main className="relative w-full min-w-0 overflow-x-clip">
       <AnimatedBackground />
       <Navbar scrolled={scrolled} />
       <Hero />
@@ -32,6 +34,7 @@ export default function Home() {
       <Experience />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

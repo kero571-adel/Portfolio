@@ -115,7 +115,7 @@ export default function Navbar({ scrolled }) {
         {/* Mobile Menu Button */}
         <motion.button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-slate-300 hover:text-blue-400 relative w-8 h-8 flex flex-col backdrop-blur-md justify-center items-center gap-1.5"
+          className="md:hidden text-slate-300 hover:text-blue-400 relative w-8 h-8 flex flex-col justify-center items-center gap-1.5 cursor-pointer"
           aria-label="Toggle menu"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -149,7 +149,7 @@ export default function Navbar({ scrolled }) {
           <>
             {/* Blur Overlay */}
             <motion.div
-              className="fixed inset-0 backdrop-blur-sm z-40"
+              className="fixed inset-0  z-40"
               style={{ backgroundColor: "#1d1c1c80" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

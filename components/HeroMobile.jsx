@@ -7,11 +7,9 @@ import { useRouter } from "next/navigation";
 export default function HeroMobile() {
   const router = useRouter();
   const [activeButton, setActiveButton] = useState("portfolio");
-  const [bgColor, setBgColor] = useState("#46444475");
 
   const handlePortfolioClick = () => {
     setActiveButton("portfolio");
-    setBgColor("#46444475");
     // يمكن إضافة أكشن إضافي هنا مثل Scroll أو Navigation
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
@@ -21,7 +19,6 @@ export default function HeroMobile() {
 
   const handleHireClick = () => {
     setActiveButton("hire");
-    setBgColor("#FFA96A");
     router.push("#contact");
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -58,12 +55,22 @@ export default function HeroMobile() {
   };
 
   return (
-    <section className="lg:hidden w-full h-[100dvh] flex flex-col items-center text-center relative overflow-hidden pt-20">
+    <section
+    className="
+    lg:hidden 
+    w-full 
+    h-[100dvh] 
+    grid 
+    grid-rows-[1fr_auto] 
+    overflow-hidden 
+    pt-[80px]
+    "
+    >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="w-full flex-1 flex flex-col items-center justify-start relative"
+        className="w-full flex flex-col items-center justify-center min-h-0"
       >
         {/* Heliot Badge - تحت Navbar */}
         <motion.div
@@ -103,7 +110,7 @@ export default function HeroMobile() {
         >
           {/* Decorative strokes left */}
           <div className="absolute left-0 md:left-6 -bottom-6 text-orange-400"></div>
-          <h3 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h3 className="text-[clamp(1.75rem,5vw,3rem)] font-bold leading-tight">
             I'm <span className="text-orange-400">Keroles Adel</span>,<br />
             Front-End Developer
           </h3>
@@ -114,7 +121,7 @@ export default function HeroMobile() {
       <div className="relative w-full flex flex-col items-center justify-end">
         {/* Half Circle Background with smooth transition - اكبر حجم */}
         <motion.div
-          animate={{ backgroundColor: bgColor }}
+          animate={{ backgroundColor: "#46444475" }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className="absolute w-screen h-[380px] md:w-[100%] md:h-[480px] rounded-t-full bottom-0 z-10 overflow-hidden"
           style={{ left: "50%", transform: "translateX(-50%)" }}
@@ -141,7 +148,7 @@ export default function HeroMobile() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="absolute bottom-12 flex items-center p-1 border border-white/60 bg-transparent backdrop-blur-md rounded-full z-70"
+          className="absolute bottom-12 flex items-center p-1 border border-white/60 bg-transparent backdrop-blur-md rounded-full z-30"
         >
           <motion.button
             onClick={handlePortfolioClick}

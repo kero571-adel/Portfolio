@@ -18,9 +18,13 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: clip;
 }
 
 body {
+  width: 100%;
+  margin: 0;
   background-color: #0f172a;
   color: #e2e8f0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -28,6 +32,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+/*
+ * Hero: min-height only (no fixed height) avoids empty bands inside flex layouts.
+ * 100dvh tracks the dynamic viewport; -webkit-fill-available helps older iOS.
+ */
+.hero-full-viewport {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
 }
 
 /* Custom Utilities - Define before Tailwind layer */
