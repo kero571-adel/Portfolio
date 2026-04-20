@@ -12,6 +12,12 @@ export const metadata = {
     "Professional Full Stack Developer Portfolio - Building Exceptional Web Experiences",
   keywords: "Developer, Portfolio, Full Stack, React, Next.js, JavaScript",
   authors: [{ name: "Keroles Adel" }],
+  icons: {
+    icon: "/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png.png",        
+    apple: "/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png.png",       
+    shortcut: "/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png.png",    
+  },
+
   openGraph: {
     title: "Keroles Adel | frontend Developer",
     description: "Professional frontend Developer Portfolio",

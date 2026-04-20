@@ -1,0 +1,15 @@
+{
+    "name": "Keroles Adel - Portfolio",
+    "short_name": "Keroles",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "icons": [
+      {
+        "src": "/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
