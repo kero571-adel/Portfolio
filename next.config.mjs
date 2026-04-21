@@ -1,7 +1,12 @@
+
+import createNextIntlPlugin from "next-intl/plugin";
+
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.js");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   productionBrowserSourceMaps: false,
 
@@ -12,45 +17,26 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Headers for performance and security
-  headers: async () => {
+  // Headers for security
+  async headers() {
     return [
       {
         source: "/:path*",
         headers: [
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          {
-            key: "X-Frame-Options",
-            value: "SAMEORIGIN",
-          },
-          {
-            key: "X-XSS-Protection",
-            value: "1; mode=block",
-          },
-          {
-            key: "Referrer-Policy",
-            value: "strict-origin-when-cross-origin",
-          },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "X-XSS-Protection", value: "1; mode=block" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
         ],
       },
     ];
   },
 
-  // Redirects for SEO
-  redirects: async () => {
-    return [];
+  // Redirects & Rewrites (لو محتاجهم)
+  async redirects() { return []; },
+  async rewrites() {
+    return { beforeFiles: [], afterFiles: [] };
   },
 
-  // Rewrites for API
-  rewrites: async () => {
-    return {
-      beforeFiles: [],
-      afterFiles: [],
-    };
-  },
 };
-
-export default nextConfig;
+export default withNextIntl(nextConfig);

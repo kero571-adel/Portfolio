@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import { useTranslations } from "next-intl";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -10,7 +10,7 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-
+  const t = useTranslations("contact");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -29,9 +29,7 @@ export default function Contact() {
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
@@ -44,38 +42,37 @@ export default function Contact() {
           setFormData({ name: "", email: "", subject: "", message: "" });
         }, 3000);
       } else {
-        alert(data.error || "Failed to send message. Please try again.");
+        alert(data.error || t("errors.failed")); // ✅ ترجمة خطأ الـ API
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("An error occurred while sending your message. Please try again.");
+      alert(t("errors.error")); // ✅ ترجمة خطأ الشبكة
     } finally {
       setLoading(false);
     }
   };
-
   const contactInfo = [
     {
       icon: "📧",
-      label: "Email",
+      label: t("labels.email"),
       value: "kerolesadel297@gmail.com",
       link: "mailto:kerolesadel297@gmail.com",
     },
     {
       icon: "📱",
-      label: "Phone / whatsapp",
+      label: t("labels.phone"),
       value: "+20 127 244 2140",
       link: "https://wa.me/201272442140",
     },
     {
       icon: "💼",
-      label: "LinkedIn",
+      label: t("labels.linkedin"),
       value: "linkedin.com/in/keroles-adel",
       link: "https://www.linkedin.com/in/keroles-adel-08020b332/",
     },
     {
       icon: "🐙",
-      label: "GitHub",
+      label: t("labels.github"),
       value: "github.com/kero571-adel",
       link: "https://github.com/kero571-adel",
     },
@@ -112,12 +109,13 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">
-            <span className="gradient-text">Let's Get In Touch</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              {t("title")}
+            </span>
           </h2>
-          <p className="section-subtitle">
-            I'm open to internships, freelance opportunities, and collaboration
-            on exciting projects.
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -131,13 +129,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4">Connect With Me</h3>
-              <p className="text-slate-400 mb-6">
-                I'm a Front-End Developer specializing in React.js and Next.js.
-                I'm currently studying Computer Science and always open to
-                internships, freelance projects, and collaboration
-                opportunities. Feel free to reach out!
-              </p>
+              <h3 className="text-2xl font-bold mb-4">{t("connectTitle")}</h3>
             </div>
 
             {/* Contact Cards */}
@@ -206,7 +198,7 @@ export default function Contact() {
                 transition={{ delay: 0.1 }}
               >
                 <label className="block text-slate-300 font-semibold mb-2">
-                  Your Name *
+                  {t("form.name")}
                 </label>
                 <input
                   type="text"
@@ -215,7 +207,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full card-base px-4 py-3 border border-slate-700/50 focus:border-blue-500/50 focus:outline-none text-slate-100 placeholder-slate-600 transition-all duration-300"
-                  placeholder="John Doe"
+                  placeholder={t("form.placeholders.name")}
                 />
               </motion.div>
 
@@ -225,7 +217,7 @@ export default function Contact() {
                 transition={{ delay: 0.2 }}
               >
                 <label className="block text-slate-300 font-semibold mb-2">
-                  Your Email *
+                  {t("form.email")}
                 </label>
                 <input
                   type="email"
@@ -244,7 +236,7 @@ export default function Contact() {
                 transition={{ delay: 0.3 }}
               >
                 <label className="block text-slate-300 font-semibold mb-2">
-                  Subject *
+                  {t("form.subject")}
                 </label>
                 <input
                   type="text"
@@ -253,7 +245,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full card-base px-4 py-3 border border-slate-700/50 focus:border-blue-500/50 focus:outline-none text-slate-100 placeholder-slate-600 transition-all duration-300"
-                  placeholder="Project Discussion"
+                  placeholder={t("form.placeholders.subject")}
                 />
               </motion.div>
 
@@ -263,7 +255,7 @@ export default function Contact() {
                 transition={{ delay: 0.4 }}
               >
                 <label className="block text-slate-300 font-semibold mb-2">
-                  Message *
+                  {t("form.message")}
                 </label>
                 <textarea
                   name="message"
@@ -272,7 +264,7 @@ export default function Contact() {
                   required
                   rows="5"
                   className="w-full card-base px-4 py-3 border border-slate-700/50 focus:border-blue-500/50 focus:outline-none text-slate-100 placeholder-slate-600 transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project or inquiry..."
+                  placeholder={t("form.placeholders.message")}
                 ></textarea>
               </motion.div>
 
@@ -294,9 +286,7 @@ export default function Contact() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span>
-                    Message ready to send! Opening your email client...
-                  </span>
+                  <span>{t("success")}</span>
                 </motion.div>
               )}
 
@@ -314,7 +304,7 @@ export default function Contact() {
                       animate={{ rotate: 360 }}
                       transition={{ duration: 0.8, repeat: Infinity }}
                     />
-                    Sending...
+                    {t("button.sending")}
                   </>
                 ) : (
                   <>
@@ -331,7 +321,7 @@ export default function Contact() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    Send Message
+                    {t("button.send")}
                   </>
                 )}
               </motion.button>

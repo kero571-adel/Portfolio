@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { useTranslations } from "next-intl";
 export default function About() {
+  const t = useTranslations("about");
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,18 +25,60 @@ export default function About() {
   };
 
   const stats = [
-    { number: "10+", label: "Projects Built" },
-    { number: "2", label: "Internships Completed" },
-    { number: "15+", label: "Technologies Used" },
+    { number: "10+", label: t("stats.projects") },
+    { number: "2", label: t("stats.internships") },
+    { number: "15+", label: t("stats.technologies") },
   ];
 
   const highlights = [
-    "React & Next.js Development",
-    "Responsive Web Applications",
-    "Modern UI with Tailwind & MUI",
-    "REST API Integration",
-    "Redux Toolkit State Management",
-    "Clean & Scalable Code",
+    t("highlights.react"),
+    t("highlights.responsive"),
+    t("highlights.ui"),
+    t("highlights.api"),
+    t("highlights.redux"),
+    t("highlights.code"),
+  ];
+  const quickFacts = [
+    {
+      label: t("quickFacts.location"),
+      value: t("quickFacts.locationValue"),
+      icon: "📍",
+    },
+    {
+      label: t("quickFacts.availability"),
+      value: t("quickFacts.availabilityValue"),
+      icon: "🎯",
+    },
+    {
+      label: t("quickFacts.stack"),
+      value: t("quickFacts.stackValue"),
+      icon: "⚙️",
+    },
+    {
+      label: t("quickFacts.response"),
+      value: t("quickFacts.responseValue"),
+      icon: "⚡",
+    },
+  ];
+  const approachSteps = [
+    {
+      title: t("approach.planning.title"),
+      description: t("approach.planning.desc"),
+      icon: "📋",
+      step: "01",
+    },
+    {
+      title: t("approach.development.title"),
+      description: t("approach.development.desc"),
+      icon: "💻",
+      step: "02",
+    },
+    {
+      title: t("approach.optimization.title"),
+      description: t("approach.optimization.desc"),
+      icon: "⚡",
+      step: "03",
+    },
   ];
 
   return (
@@ -50,11 +93,8 @@ export default function About() {
           viewport={{ once: true }}
         >
           <h2 className="section-title">
-            <span className="gradient-text">About Me</span>
+            <span className="gradient-text">{t("title")}</span>
           </h2>
-          <p className="section-subtitle">
-            Get to know the developer behind the code
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -67,21 +107,15 @@ export default function About() {
             viewport={{ once: true }}
           >
             <motion.p className="text-slate-300 text-lg leading-relaxed">
-              I'm a Front-End Developer specializing in React.js and Next.js.
-              Currently studying Computer Science while gaining real-world
-              experience through internships with international tech teams.
+              {t("paragraph1")}
             </motion.p>
 
             <motion.p className="text-slate-300 text-lg leading-relaxed">
-              I focus on building responsive, scalable, and high-performance web
-              applications using modern technologies like React, Next.js,
-              Tailwind CSS, and Redux Toolkit.
+              {t("paragraph2")}
             </motion.p>
 
             <motion.p className="text-slate-300 text-lg leading-relaxed">
-              I enjoy solving front-end challenges, creating clean and
-              maintainable code, and turning complex ideas into smooth user
-              experiences.
+              {t("paragraph3")}
             </motion.p>
 
             {/* Key Highlights */}
@@ -164,7 +198,7 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-bold text-slate-100 mb-4">
-                Quick Facts
+                {t("quickFacts.title")}
               </h3>
 
               <motion.div
@@ -172,24 +206,7 @@ export default function About() {
                 initial="hidden"
                 animate="visible"
               >
-                {[
-                  { label: "Location", value: "Cairo, Egypt 🇪🇬", icon: "📍" },
-                  {
-                    label: "Availability",
-                    value: "Open to Front-End opportunities",
-                    icon: "🎯",
-                  },
-                  {
-                    label: "Preferred Stack",
-                    value: "React, Next.js, TypeScript",
-                    icon: "⚙️",
-                  },
-                  {
-                    label: "Response Time",
-                    value: "Usually within 12 hours",
-                    icon: "⚡",
-                  },
-                ].map((item, i) => (
+                {quickFacts.map((item, i) => (
                   <motion.div
                     key={i}
                     variants={itemVariants}
@@ -211,7 +228,7 @@ export default function About() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Let's Work Together
+                {t("cta")}
               </motion.a>
             </motion.div>
           </motion.div>
@@ -225,32 +242,10 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {[
-            {
-              title: "Planning",
-              description:
-                "Understanding project requirements and defining the best technical approach.",
-              icon: "📋",
-              step: "01",
-            },
-            {
-              title: "Development",
-              description:
-                "Building responsive and scalable interfaces using modern technologies.",
-              icon: "💻",
-              step: "02",
-            },
-            {
-              title: "Optimization",
-              description:
-                "Improving performance, accessibility, and user experience.",
-              icon: "⚡",
-              step: "03",
-            },
-          ].map((item, index) => (
+          {approachSteps.map((item, index) => (
             <motion.div
               key={index}
-              className="card-base card-hover text-center relative"
+              className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center relative hover:border-blue-500/50 transition-all"
               variants={itemVariants}
               whileHover={{ y: -8 }}
             >
@@ -266,7 +261,7 @@ export default function About() {
                 {item.icon}
               </motion.div>
               <motion.div
-                className="text-4xl font-bold gradient-text mb-3 opacity-20"
+                className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 opacity-20"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.2 }}
               >

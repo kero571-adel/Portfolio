@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { useTranslations } from "next-intl";
 export default function HeroMobile() {
+  const t = useTranslations("hero");
   const router = useRouter();
   const [activeButton, setActiveButton] = useState("portfolio");
 
@@ -56,7 +57,7 @@ export default function HeroMobile() {
 
   return (
     <section
-    className="
+      className="
     lg:hidden 
     w-full 
     h-[100dvh] 
@@ -80,7 +81,7 @@ export default function HeroMobile() {
           className="mb-4 relative inline-flex justify-center"
         >
           <div className="border border-gray-400 bg-transparent px-6 py-1.5 rounded-full text-sm font-medium inline-flex items-center gap-1 z-10">
-            Hello!
+            {t("helloBadge")}
           </div>
           {/* Decorative strokes top right */}
           <div className="absolute -top-4 -right-6 text-orange-400">
@@ -111,8 +112,9 @@ export default function HeroMobile() {
           {/* Decorative strokes left */}
           <div className="absolute left-0 md:left-6 -bottom-6 text-orange-400"></div>
           <h3 className="text-[clamp(1.75rem,5vw,3rem)] font-bold leading-tight">
-            I'm <span className="text-orange-400">Keroles Adel</span>,<br />
-            Front-End Developer
+            {t("greeting")} <span className="text-orange-400">{t("name")}</span>
+            ,<br />
+            {t("role")}
           </h3>
         </motion.div>
       </motion.div>
@@ -160,7 +162,7 @@ export default function HeroMobile() {
                 activeButton === "portfolio" ? "#FFA96A" : "transparent",
             }}
           >
-            Projects <span className="text-lg leading-none">↗</span>
+            {t("projectsBtn")} <span className="text-lg leading-none">↗</span>
           </motion.button>
 
           <motion.button
@@ -173,7 +175,7 @@ export default function HeroMobile() {
                 activeButton === "hire" ? "#FFA96A" : "transparent",
             }}
           >
-            Hire me
+            {t("hireMeBtn")}
           </motion.button>
         </motion.div>
       </div>

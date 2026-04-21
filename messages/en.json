@@ -1,0 +1,303 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cta": "Let's Talk",
+    "toggleLanguage": "Toggle Language",
+    "switchToArabic": "Switch to Arabic",
+    "switchToEnglish": "Switch to English",
+    "arabic": "🇸🇦 Arabic",
+    "english": "🇬🇧 English",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu"
+  },
+  "hero": {
+    "greeting": "I'm",
+    "name": "Keroles Adel",
+    "role": "Front-End Developer",
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me",
+    "helloBadge": "Hello!",
+    "projectsBtn": "Projects",
+    "hireMeBtn": "Hire me",
+    "altProfile": "Keroles Adel - Profile Photo"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a Front-End Developer specializing in React.js and Next.js. Currently studying Computer Science while gaining real-world experience through internships with international tech teams.",
+    "paragraph2": "I focus on building responsive, scalable, and high-performance web applications using modern technologies like React, Next.js, Tailwind CSS, and Redux Toolkit.",
+    "paragraph3": "I focus not only on building interfaces, but also on how users interact with them — ensuring every element serves a purpose, whether it's engagement, clarity, or conversion.",
+    "highlights": {
+      "react": "React & Next.js Development",
+      "responsive": "Responsive Web Applications",
+      "ui": "Modern UI with Tailwind & MUI",
+      "api": "REST API Integration",
+      "redux": "Redux Toolkit State Management",
+      "code": "Clean & Scalable Code"
+    },
+    "stats": {
+      "projects": "Projects Built",
+      "internships": "Internships Completed",
+      "technologies": "Technologies Used"
+    },
+    "quickFacts": {
+      "title": "Quick Facts",
+      "location": "Location",
+      "locationValue": "Cairo, Egypt 🇪🇬",
+      "availability": "Availability",
+      "availabilityValue": "Open to Front-End opportunities",
+      "stack": "Preferred Stack",
+      "stackValue": "React, Next.js, TypeScript",
+      "response": "Response Time",
+      "responseValue": "Usually within 12 hours"
+    },
+    "cta": "Let's Work Together",
+    "approach": {
+      "planning": {
+        "title": "Planning",
+        "desc": "Understanding project requirements and defining the best technical approach."
+      },
+      "development": {
+        "title": "Development",
+        "desc": "Building responsive and scalable interfaces using modern technologies."
+      },
+      "optimization": {
+        "title": "Optimization",
+        "desc": "Improving performance, accessibility, and user experience."
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies and tools I use to build modern web applications",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "icon": "💻"
+      },
+      "styling": {
+        "title": "Styling & UI",
+        "icon": "🎨"
+      },
+      "tools": {
+        "title": "Tools & Platforms",
+        "icon": "🛠️"
+      }
+    },
+    "frontend": {
+      "react": "React.js",
+      "nextjs": "Next.js",
+      "javascript": "JavaScript (ES6+)",
+      "typescript": "TypeScript",
+      "html5": "HTML5",
+      "css3": "CSS3"
+    },
+    "styling": {
+      "tailwind": "Tailwind CSS",
+      "mui": "Material UI",
+      "shadcn": "ShadCN UI",
+      "bootstrap": "Bootstrap",
+      "sass": "SASS",
+      "responsive": "Responsive Design"
+    },
+    "tools": {
+      "git": "Git",
+      "github": "GitHub",
+      "postman": "Postman",
+      "figma": "Figma",
+      "vercel": "Vercel",
+      "netlify": "Netlify"
+    },
+    "traits": {
+      "quickLearner": {
+        "title": "Quick Learner",
+        "desc": "Rapidly adapt to new technologies and frameworks"
+      },
+      "bestPractices": {
+        "title": "Best Practices",
+        "desc": "Follow industry standards and clean code principles"
+      },
+      "continuousGrowth": {
+        "title": "Continuous Growth",
+        "desc": "Always learning and improving my craft"
+      },
+      "userFocus": {
+        "title": "User-Centered Thinking",
+        "desc": "Understanding user behavior and building interfaces that improve engagement and conversion."
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Showcasing my best work and technical expertise",
+    "liveDemo": "Live Demo",
+    "code": "Code",
+    "viewMore": "Want to see more?",
+    "viewMoreDesc": "Explore more projects and code samples on my GitHub profile",
+    "githubCTA": "View All Projects on GitHub",
+    "lightbox": {
+      "close": "Close image preview",
+      "hint": "Click anywhere or press Esc to close"
+    },
+    "features": {
+      "more": "more"
+    },
+    "projects": {
+      "studytrack": {
+        "title": "StudyTrack – Study Management Dashboard",
+        "desc": "Interactive study dashboard with task management, progress tracking, and Firebase integration."
+      },
+      "restaurant": {
+        "title": "Restaurant Web App",
+        "desc": "Modern restaurant application with menu browsing, cart system, and smooth animations."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Store",
+        "desc": "Fully functional e-commerce application with cart management, routing system, and dynamic state handling using React Context."
+      },
+      "weather": {
+        "title": "Weather ",
+        "desc": "Real-time weather  with API integration, search functionality, and advanced state handling."
+      },
+      "facebook": {
+        "title": "Facebook Clone",
+        "desc": "Social media platform clone with full post system, authentication, and dynamic API integration."
+      },
+      "pharmacy": {
+        "title": "Pharmacy Landing Page",
+        "desc": "A conversion-focused pharmacy landing page built with Next.js, tailored for a pharmacy chain in Upper Egypt. Features Arabic RTL support, structured SEO data, and clear service presentation including 24/7 delivery and medical consultations."
+      },
+      "fullstack": {
+        "title": "Full-Stack Next.js App",
+        "desc": "Full-stack application built with Next.js, Prisma, and MySQL with server-side rendering and full CRUD operations."
+      },
+      "safarni": {
+        "title": "Safarni – Travel Booking Platform",
+        "desc": "Advanced travel booking platform with full flight booking flow, secure payment system, and dynamic state management using Redux Toolkit."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience & Learning Journey",
+    "subtitle": "Internships, education and hands-on experience in frontend development",
+    "sections": {
+      "professional": "Professional Experience",
+      "education": "Education & Certifications",
+      "continuousLearning": "Continuous Learning"
+    },
+    "viewCertificate": "View Certificate",
+    "learningPoints": [
+      "Regularly learning new frontend technologies",
+      "Building personal projects to improve practical skills",
+      "Following modern React and Next.js best practices",
+      "Practicing problem solving and clean code principles",
+      "User Behavior & Conversion Learning"
+    ],
+    "internships": {
+      "huma": {
+        "title": "Frontend Developer Intern",
+        "company": "Huma-Volve (Remote)",
+        "duration": "Nov 2025 – Dec 2025",
+        "desc": "Worked on two large-scale real-world platforms (Medical & Travel) using modern frontend technologies with a focus on performance, scalability, and clean architecture.",
+        "responsibilities": [
+          "Developed full authentication system (login, signup, validation, protected routes)",
+          "Built core UI components including Home page, Navigation and user flows",
+          "Worked on Travel Platform modules: Payment, Flight Booking, Destinations, Favorites and Compare features",
+          "Implemented reusable and scalable components using React, TypeScript and Tailwind CSS",
+          "Managed global state using Redux Toolkit",
+          "Collaborated with team using Git workflow, branches, pull requests and code reviews"
+        ]
+      },
+      "saiket": {
+        "title": "Frontend Developer Intern",
+        "company": "Saiket Systems (Remote)",
+        "duration": "Jun 2025 – Jul 2025",
+        "desc": "Built interactive and user-focused web pages while following modern UI/UX principles and improving performance and accessibility.",
+        "responsibilities": [
+          "Developed responsive web pages using HTML, CSS and JavaScript",
+          "Debugged and fixed UI issues to enhance performance and user experience",
+          "Applied clean code practices and structured components effectively",
+          "Worked on real tasks and contributed to production-ready features",
+          "Participated in technical and soft-skill feedback sessions"
+        ]
+      }
+    },
+    "education": {
+      "cs": {
+        "degree": "Computer Science",
+        "institution": "El-Shorouk Academy",
+        "year": "2022 – Present"
+      },
+      "react": {
+        "degree": "React.js Certificate",
+        "institution": "Udemy",
+        "year": "2024"
+      },
+      "nextjs": {
+        "degree": "Next.js Certificate",
+        "institution": "Udemy",
+        "year": "2025"
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's Get In Touch",
+    "subtitle": "I'm open to internships, freelance opportunities, and collaboration on exciting projects.",
+    "connectTitle": "Connect With Me",
+    "connectDesc": "I'm a Front-End Developer specializing in React.js and Next.js. I'm currently studying Computer Science and always open to internships, freelance projects, and collaboration opportunities. Feel free to reach out!",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "form": {
+      "name": "Your Name *",
+      "email": "Your Email *",
+      "subject": "Subject *",
+      "message": "Message *",
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "subject": "Project Discussion",
+        "message": "Tell me about your project or inquiry..."
+      }
+    },
+    "success": "Message ready to send! Opening your email client...",
+    "button": {
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "errors": {
+      "failed": "Failed to send message. Please try again.",
+      "error": "An error occurred while sending your message. Please try again."
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Keroles Adel",
+      "desc1": "Front-End Developer specializing in React.js and Next.js, passionate about",
+      "desc2": "building exceptional web experiences that combine clean code with beautiful design.",
+      "copyright": "© {year} All rights reserved."
+    },
+    "links": {
+      "navigation": "Navigation",
+      "resources": "Resources",
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "Contact"
+    },
+    "credits": "Built with <heart/> using Next.js,Tailwind CSS",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  }
+}

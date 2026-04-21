@@ -1,21 +1,30 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 
 export default function Navbar({ scrolled }) {
+  const t = useTranslations("nav");
+  const router = useRouter();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
-  ];
+  const currentLocale = useLocale();
 
+  // ✅ دالة تبديل اللغة - من الكود الجديد
+  const toggleLanguage = () => {
+    const isArabic = pathname.startsWith("/ar");
+    const newLocale = isArabic ? "en" : "ar";
+    let cleanPath = pathname.replace(/^\/(en|ar)/, "");
+    if (!cleanPath) cleanPath = "/";
+    router.replace(cleanPath, { locale: newLocale });
+  };
+
+  // ✅ إغلاق القائمة عند ضغط Escape
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape") setMobileMenuOpen(false);
@@ -24,6 +33,15 @@ export default function Navbar({ scrolled }) {
     return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
+  // ✅ منع الـ Scroll عند فتح الموبايل منيو
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  // ✅ أنيميشن - من الكود القديم
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -44,6 +62,14 @@ export default function Navbar({ scrolled }) {
     },
   };
 
+  // ✅ الروابط مع الترجمة
+  const navLinks = [
+    { href: "#about", label: t("about") },
+    { href: "#skills", label: t("skills") },
+    { href: "#projects", label: t("projects") },
+    { href: "#experience", label: t("experience") },
+  ];
+
   return (
     <motion.nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -56,24 +82,22 @@ export default function Navbar({ scrolled }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="container-max flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/">
-          <motion.div
-            className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-blue-500/50 cursor-pointer"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Image
-              src="/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png"
-              alt="Keroles Adel"
-              fill
-              className="object-cover"
-              sizes="40px"
-            />
-          </motion.div>
-        </Link>
+        
+        {/* 🔹 زر تبديل اللغة (مكان اللوجو) - بنفس ستايل اللوجو القديم */}
+        <motion.button
+          onClick={toggleLanguage}
+          className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-blue-500/50 cursor-pointer flex items-center justify-center bg-slate-800/50 backdrop-blur-sm"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label={t("toggleLanguage")}
+          title={pathname.startsWith("/ar") ? t("switchToEnglish") : t("switchToArabic")}
+        >
+          <span className="text-slate-200 font-bold text-sm hover:text-blue-400 transition-colors">
+            {pathname.startsWith("/ar") ? "EN" : "AR"}
+          </span>
+        </motion.button>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu - ستايل الكود القديم */}
         <motion.div
           className="hidden md:flex gap-8 items-center glass backdrop-blur-md px-6 py-2 rounded-lg"
           variants={containerVariants}
@@ -96,7 +120,7 @@ export default function Navbar({ scrolled }) {
           ))}
         </motion.div>
 
-        {/* CTA Button */}
+        {/* CTA Button - ستايل الكود القديم */}
         <motion.a
           href="#contact"
           className="hidden md:flex px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-semibold transition-all duration-300"
@@ -109,10 +133,10 @@ export default function Navbar({ scrolled }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.8 }}
         >
-          Let's Talk
+          {t("cta")}
         </motion.a>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - ستايل الكود القديم */}
         <motion.button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-slate-300 hover:text-blue-400 relative w-8 h-8 flex flex-col justify-center items-center gap-1.5 cursor-pointer"
@@ -143,13 +167,13 @@ export default function Navbar({ scrolled }) {
         </motion.button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - ستايل الكود القديم بالظبط */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
             {/* Blur Overlay */}
             <motion.div
-              className="fixed inset-0  z-40"
+              className="fixed inset-0 z-40"
               style={{ backgroundColor: "#1d1c1c80" }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -167,6 +191,20 @@ export default function Navbar({ scrolled }) {
               transition={{ duration: 0.3 }}
             >
               <div className="container-max flex flex-col gap-4">
+                
+                {/* زر تبديل اللغة داخل الموبايل منيو */}
+                <motion.button
+                  onClick={() => {
+                    toggleLanguage();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full px-4 py-2 rounded-lg border border-slate-700/50 bg-slate-800/50 text-slate-200 font-medium text-left hover:text-blue-400 transition-colors"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {currentLocale === "en" ? "العربية" : " English"}
+                </motion.button>
+
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.href}
@@ -183,6 +221,7 @@ export default function Navbar({ scrolled }) {
                     </Link>
                   </motion.div>
                 ))}
+                
                 <motion.a
                   href="#contact"
                   className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-semibold text-center hover:shadow-lg transition-all duration-300 mt-2"
@@ -190,7 +229,7 @@ export default function Navbar({ scrolled }) {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Let's Talk
+                  {t("cta")}
                 </motion.a>
               </div>
             </motion.div>

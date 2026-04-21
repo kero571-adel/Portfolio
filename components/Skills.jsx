@@ -2,57 +2,82 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState("frontend");
+  const t = useTranslations("skills");
 
   const skillCategories = {
     frontend: {
-      title: "Frontend Development",
-      icon: "💻",
+      title: t("categories.frontend.title"),
+      icon: t("categories.frontend.icon"),
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "React.js", level: 90, icon: "⚛️" },
-        { name: "Next.js", level: 85, icon: "▲" },
-        { name: "JavaScript (ES6+)", level: 90, icon: "📜" },
-        { name: "TypeScript", level: 80, icon: "🔷" },
-        { name: "HTML5", level: 95, icon: "🏗️" },
-        { name: "CSS3", level: 90, icon: "🎨" },
+        { name: t("frontend.react"), level: 90, icon: "⚛️" },
+        { name: t("frontend.nextjs"), level: 85, icon: "▲" },
+        { name: t("frontend.javascript"), level: 90, icon: "📜" },
+        { name: t("frontend.typescript"), level: 80, icon: "🔷" },
+        { name: t("frontend.html5"), level: 95, icon: "🏗️" },
+        { name: t("frontend.css3"), level: 90, icon: "🎨" },
       ],
     },
-
     styling: {
-      title: "Styling & UI",
-      icon: "🎨",
+      title: t("categories.styling.title"),
+      icon: t("categories.styling.icon"),
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "Tailwind CSS", level: 90, icon: "🎯" },
-        { name: "Material UI", level: 85, icon: "🧩" },
-        { name: "ShadCN UI", level: 85, icon: "🧱" },
-        { name: "Bootstrap", level: 85, icon: "🅱️" },
-        { name: "SASS", level: 80, icon: "💅" },
-        { name: "Responsive Design", level: 90, icon: "📱" },
+        { name: t("styling.tailwind"), level: 90, icon: "🎯" },
+        { name: t("styling.mui"), level: 85, icon: "🧩" },
+        { name: t("styling.shadcn"), level: 85, icon: "🧱" },
+        { name: t("styling.bootstrap"), level: 85, icon: "🅱️" },
+        { name: t("styling.sass"), level: 80, icon: "💅" },
+        { name: t("styling.responsive"), level: 90, icon: "📱" },
       ],
     },
-
     tools: {
-      title: "Tools & Platforms",
-      icon: "🛠️",
+      title: t("categories.tools.title"),
+      icon: t("categories.tools.icon"),
       color: "from-green-500 to-teal-500",
       skills: [
-        { name: "Git", level: 90, icon: "🌳" },
-        { name: "GitHub", level: 90, icon: "🐙" },
-        { name: "Postman", level: 85, icon: "📬" },
-        { name: "Figma", level: 80, icon: "🎨" },
-        { name: "Vercel", level: 90, icon: "▲" },
-        { name: "Netlify", level: 90, icon: "🌐" },
+        { name: t("tools.git"), level: 90, icon: "🌳" },
+        { name: t("tools.github"), level: 90, icon: "🐙" },
+        { name: t("tools.postman"), level: 85, icon: "📬" },
+        { name: t("tools.figma"), level: 80, icon: "🎨" },
+        { name: t("tools.vercel"), level: 90, icon: "▲" },
+        { name: t("tools.netlify"), level: 90, icon: "🌐" },
       ],
     },
   };
 
   const categories = Object.keys(skillCategories);
   const current = skillCategories[activeCategory];
-
+  const traits = [
+    {
+      title: t("traits.quickLearner.title"),
+      description: t("traits.quickLearner.desc"),
+      icon: "⚡",
+      color: "from-yellow-500 to-orange-500",
+    },
+    {
+      title: t("traits.bestPractices.title"),
+      description: t("traits.bestPractices.desc"),
+      icon: "✨",
+      color: "from-blue-500 to-purple-500",
+    },
+    {
+      title: t("traits.continuousGrowth.title"),
+      description: t("traits.continuousGrowth.desc"),
+      icon: "📈",
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: t("traits.userFocus.title"),
+      description: t("traits.userFocus.desc"),
+      icon: "📈",
+      color: "from-green-500 to-emerald-500",
+    },
+  ];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -85,11 +110,9 @@ export default function Skills() {
           viewport={{ once: true }}
         >
           <h2 className="section-title">
-            <span className="gradient-text">Technical Skills</span>
+            <span className="gradient-text">{t("title")}</span>
           </h2>
-          <p className="section-subtitle">
-            Technologies and tools I use to build modern web applications
-          </p>
+          <p className="section-subtitle">{t("subtitle")}</p>
         </motion.div>
 
         {/* Category Tabs */}
@@ -153,30 +176,10 @@ export default function Skills() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {[
-            {
-              title: "Quick Learner",
-              description: "Rapidly adapt to new technologies and frameworks",
-              icon: "⚡",
-              color: "from-yellow-500 to-orange-500",
-            },
-            {
-              title: "Best Practices",
-              description:
-                "Follow industry standards and clean code principles",
-              icon: "✨",
-              color: "from-blue-500 to-purple-500",
-            },
-            {
-              title: "Continuous Growth",
-              description: "Always learning and improving my craft",
-              icon: "📈",
-              color: "from-green-500 to-emerald-500",
-            },
-          ].map((item, index) => (
+          {traits.map((item, index) => (
             <motion.div
               key={index}
-              className="card-base card-hover text-center"
+              className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all"
               variants={itemVariants}
               whileHover={{ y: -8 }}
             >

@@ -1,23 +1,15 @@
 "use client";
-
 import { motion } from "framer-motion";
-
+import { useTranslations } from "next-intl";
 export default function Experience() {
+  const t = useTranslations("experience");
   const experiences = [
     {
-      title: "Frontend Developer Intern",
-      company: "Huma-Volve (Remote)",
-      duration: "Nov 2025 – Dec 2025",
-      description:
-        "Worked on two large-scale real-world platforms (Medical & Travel) using modern frontend technologies with a focus on performance, scalability, and clean architecture.",
-      responsibilities: [
-        "Developed full authentication system (login, signup, validation, protected routes)",
-        "Built core UI components including Home page, Navigation and user flows",
-        "Worked on Travel Platform modules: Payment, Flight Booking, Destinations, Favorites and Compare features",
-        "Implemented reusable and scalable components using React, TypeScript and Tailwind CSS",
-        "Managed global state using Redux Toolkit",
-        "Collaborated with team using Git workflow, branches, pull requests and code reviews",
-      ],
+      title: t("internships.huma.title"),
+      company: t("internships.huma.company"),
+      duration: t("internships.huma.duration"),
+      description: t("internships.huma.desc"),
+      responsibilities: t.raw("internships.huma.responsibilities"), // ✅ استخدام raw للمصفوفات
       skills: [
         "React",
         "TypeScript",
@@ -28,44 +20,34 @@ export default function Experience() {
         "Git",
       ],
     },
-
     {
-      title: "Frontend Developer Intern",
-      company: "Saiket Systems (Remote)",
-      duration: "Jun 2025 – Jul 2025",
-      description:
-        "Built interactive and user-focused web pages while following modern UI/UX principles and improving performance and accessibility.",
-      responsibilities: [
-        "Developed responsive web pages using HTML, CSS and JavaScript",
-        "Debugged and fixed UI issues to enhance performance and user experience",
-        "Applied clean code practices and structured components effectively",
-        "Worked on real tasks and contributed to production-ready features",
-        "Participated in technical and soft-skill feedback sessions",
-      ],
+      title: t("internships.saiket.title"),
+      company: t("internships.saiket.company"),
+      duration: t("internships.saiket.duration"),
+      description: t("internships.saiket.desc"),
+      responsibilities: t.raw("internships.saiket.responsibilities"),
       skills: ["HTML", "CSS", "JavaScript", "Git", "UI/UX"],
     },
   ];
   const education = [
     {
-      degree: "Computer Science",
-      institution: "El-Shorouk Academy",
-      year: "2022 – Present",
+      degree: t("education.cs.degree"),
+      institution: t("education.cs.institution"),
+      year: t("education.cs.year"),
       icon: "🎓",
     },
-
     {
-      degree: "React.js Certificate",
-      institution: "Udemy",
-      year: "2024",
+      degree: t("education.react.degree"),
+      institution: t("education.react.institution"),
+      year: t("education.react.year"),
       icon: "⚛️",
       certificateLink:
         "https://www.udemy.com/certificate/UC-28e228bf-2438-4ddb-a177-8291ab12442b/",
     },
-
     {
-      degree: "Next.js Certificate",
-      institution: "Udemy",
-      year: "2025",
+      degree: t("education.nextjs.degree"),
+      institution: t("education.nextjs.institution"),
+      year: t("education.nextjs.year"),
       icon: "▲",
       certificateLink: "http://ude.my/UC-9fb8716c-e568-4c84-89b0-b7603cdf81aa",
     },
@@ -80,7 +62,7 @@ export default function Experience() {
       },
     },
   };
-
+  const learningPoints = t.raw("learningPoints");
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -102,12 +84,9 @@ export default function Experience() {
           viewport={{ once: true }}
         >
           <h2 className="section-title">
-            <span className="gradient-text">Experience & Learning Journey</span>
+            <span className="gradient-text">{t("title")}</span>
           </h2>
-          <p className="section-subtitle">
-            Internships, education and hands-on experience in frontend
-            development
-          </p>
+          <p className="section-subtitle">{t("subtitle")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -123,7 +102,7 @@ export default function Experience() {
                 className="w-1 h-8 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"
                 layoutId="experienceBorder"
               />
-              Professional Experience
+              {t("sections.professional")}
             </h3>
 
             <motion.div
@@ -209,7 +188,7 @@ export default function Experience() {
                 className="w-1 h-8 bg-gradient-to-b from-purple-500 to-pink-600 rounded-full"
                 layoutId="educationBorder"
               />
-              Education & Certifications
+              {t("sections.education")}
             </h3>
 
             <motion.div
@@ -256,7 +235,7 @@ export default function Experience() {
                         className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors"
                         whileHover={{ x: 4 }}
                       >
-                        View Certificate
+                        {t("viewCertificate")}
                         <motion.svg
                           className="w-4 h-4"
                           fill="none"
@@ -295,15 +274,10 @@ export default function Experience() {
                   >
                     📚
                   </motion.span>
-                  Continuous Learning
+                  {t("sections.continuousLearning")}
                 </h4>
                 <ul className="space-y-3 text-slate-400 text-sm">
-                  {[
-                    "Regularly learning new frontend technologies",
-                    "Building personal projects to improve practical skills",
-                    "Following modern React and Next.js best practices",
-                    "Practicing problem solving and clean code principles",
-                  ].map((item, i) => (
+                  {learningPoints.map((item, i) => (
                     <motion.li
                       key={i}
                       className="flex gap-2"

@@ -1,18 +1,20 @@
 "use client";
-
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Projects() {
+  const t = useTranslations("projects");
   const [selectedImage, setSelectedImage] = useState(null);
   const [isImageLoaded, setIsImageLoaded] = useState({});
 
   // منع الـ Scroll عند فتح الـ Lightbox
   useEffect(() => {
     document.body.style.overflow = selectedImage ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [selectedImage]);
 
   // دالة للتحقق لو القيمة صورة حقيقية أو Emoji
@@ -32,110 +34,160 @@ export default function Projects() {
   const projects = [
     {
       id: 3,
-      title: "StudyTrack – Study Management Dashboard",
-      description: "Interactive study dashboard with task management, progress tracking, and Firebase integration.",
+      title: t("projects.studytrack.title"),
+      description: t("projects.studytrack.desc"),
       image: "/imageProject/WhatsApp Image 2026-03-21 at 7.54.21 PM.jpeg",
       tags: ["React", "Redux Toolkit", "Firebase", "Framer Motion"],
       category: "frontend",
       link: "https://study-track-nu.vercel.app/",
       github: "#",
       gradient: "from-pink-500 to-purple-500",
-      features: ["Task Management System", "Progress Tracking Dashboard", "Firebase Integration", "Responsive UI"],
+      features: [
+        "Task Management System",
+        "Progress Tracking Dashboard",
+        "Firebase Integration",
+        "Responsive UI",
+      ],
     },
     {
       id: 4,
-      title: "Restaurant Web App",
-      description: "Modern restaurant application with menu browsing, cart system, and smooth animations.",
+      title: t("projects.restaurant.title"),
+      description: t("projects.restaurant.desc"),
       image: "/imageProject/WhatsApp Image 2026-03-22 at 2.41.59 PM (1).jpeg",
       tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
       category: "frontend",
       link: "https://crunchybite.vercel.app/",
       github: "#",
       gradient: "from-orange-500 to-red-500",
-      features: ["Interactive Food Menu", "Cart System using Context API", "Smooth Animations", "Responsive Design"],
+      features: [
+        "Interactive Food Menu",
+        "Cart System using Context API",
+        "Smooth Animations",
+        "Responsive Design",
+      ],
     },
     {
       id: 5,
-      title: "E-Commerce Store",
-      description: "Fully functional e-commerce application with cart management, routing system, and dynamic state handling using React Context.",
+      title: t("projects.ecommerce.title"),
+      description: t("projects.ecommerce.desc"),
       image: "/imageProject/WhatsApp Image 2026-03-22 at 3.17.54 PM.jpeg",
       tags: ["React", "React Router", "Context API", "Bootstrap"],
       category: "frontend",
       link: "https://willowy-llama-affd20.netlify.app/",
       github: "#",
       gradient: "from-green-500 to-emerald-500",
-      features: ["Cart & User Interaction Management", "Client-side Routing", "Responsive UI Design", "Reusable Components"],
+      features: [
+        "Cart & User Interaction Management",
+        "Client-side Routing",
+        "Responsive UI Design",
+        "Reusable Components",
+      ],
     },
     {
       id: 6,
-      title: "Weather App",
-      description: "Real-time weather application with API integration, search functionality, and advanced state handling.",
+      title: t("projects.weather.title"),
+      description: t("projects.weather.desc"),
       image: "/imageProject/WhatsApp Image 2026-03-22 at 2.42.00 PM.jpeg",
       tags: ["React", "Axios", "Material UI"],
       category: "frontend",
       link: "https://lustrous-meerkat-c75d89.netlify.app/",
       github: "#",
       gradient: "from-yellow-500 to-orange-500",
-      features: ["Real-Time API Data Fetching", "Search by Location", "Error Handling & Loading States", "Reusable Components"],
+      features: [
+        "Real-Time API Data Fetching",
+        "Search by Location",
+        "Error Handling & Loading States",
+        "Reusable Components",
+      ],
     },
     {
       id: 7,
-      title: "Facebook Clone",
-      description: "Social media platform clone with full post system, authentication, and dynamic API integration.",
+      title: t("projects.facebook.title"),
+      description: t("projects.facebook.desc"),
       image: "📱",
       tags: ["HTML", "CSS", "JavaScript", "Axios"],
       category: "frontend",
       link: "https://spiffy-sprite-1fc859.netlify.app/",
       github: "#",
       gradient: "from-indigo-500 to-blue-500",
-      features: ["Create/Edit/Delete Posts", "Comments System", "Authentication using localStorage", "API Integration with Axios"],
+      features: [
+        "Create/Edit/Delete Posts",
+        "Comments System",
+        "Authentication using localStorage",
+        "API Integration with Axios",
+      ],
     },
     {
       id: 9,
-      title: "Pharmacy Landing Page",
-      description: "A conversion-focused pharmacy landing page built with Next.js, tailored for a pharmacy chain in Upper Egypt. Features Arabic RTL support, structured SEO data, and clear service presentation including 24/7 delivery and medical consultations.",
+      title: t("projects.pharmacy.title"),
+      description: t("projects.pharmacy.desc"),
       image: "/imageProject/Screenshot 2026-04-21 013205.png",
       tags: ["Next.js", "Tailwind CSS", "SEO", "RTL", "Landing Page"],
       category: "frontend",
       link: "https://ourpharmacies.vercel.app/",
       github: "#",
       gradient: "from-green-500 to-teal-500",
-      features: ["Modern Landing Page Design", "Arabic RTL Localization", "Services Showcase Sections", "SEO Optimization (Meta + JSON-LD)", "Responsive UI Across Devices", "WhatsApp Quick Contact Integration"],
+      features: [
+        "Modern Landing Page Design",
+        "Arabic RTL Localization",
+        "Services Showcase Sections",
+        "SEO Optimization (Meta + JSON-LD)",
+        "Responsive UI Across Devices",
+        "WhatsApp Quick Contact Integration",
+      ],
     },
     {
       id: 8,
-      title: "Full-Stack Next.js App",
-      description: "Full-stack application built with Next.js, Prisma, and MySQL with server-side rendering and full CRUD operations.",
+      title: t("projects.fullstack.title"),
+      description: t("projects.fullstack.desc"),
       image: "⚡",
       tags: ["Next.js", "Prisma", "MySQL", "Tailwind CSS"],
       category: "fullstack",
       link: "#",
       github: "#",
       gradient: "from-teal-500 to-green-500",
-      features: ["Full CRUD Operations", "Database Design (Prisma + MySQL)", "SSR & CSR using Next.js", "REST API Routes"],
+      features: [
+        "Full CRUD Operations",
+        "Database Design (Prisma + MySQL)",
+        "SSR & CSR using Next.js",
+        "REST API Routes",
+      ],
     },
     {
       id: 1,
-      title: "Safarni – Travel Booking Platform",
-      description: "Advanced travel booking platform with full flight booking flow, secure payment system, and dynamic state management using Redux Toolkit.",
+      title: t("projects.safarni.title"),
+      description: t("projects.safarni.desc"),
       image: "✈️",
       tags: ["React", "Redux Toolkit", "Tailwind CSS", "MUI"],
       category: "frontend",
       link: "https://r7-react-safarni.vercel.app/",
       github: "#",
       gradient: "from-blue-500 to-cyan-500",
-      features: ["Flight Booking & Reservation System", "Secure Payment Integration", "Destinations & Favorites System", "Compare Flights Feature", "REST API Integration"],
+      features: [
+        "Flight Booking & Reservation System",
+        "Secure Payment Integration",
+        "Destinations & Favorites System",
+        "Compare Flights Feature",
+        "REST API Integration",
+      ],
     },
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -151,11 +203,11 @@ export default function Projects() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Featured Projects
+              {t("title")}
             </span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Showcasing my best work and technical expertise
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -169,7 +221,6 @@ export default function Projects() {
         >
           {projects.map((project) => {
             const hasRealImage = isRealImage(project.image);
-
             return (
               <motion.div
                 key={project.id}
@@ -178,9 +229,16 @@ export default function Projects() {
                 layout
               >
                 {/* Project Image/Emoji Header */}
-                <div className="relative h-48 overflow-hidden cursor-pointer" onClick={() => hasRealImage && setSelectedImage(project.image)}>
+                <div
+                  className="relative h-48 overflow-hidden cursor-pointer"
+                  onClick={() =>
+                    hasRealImage && setSelectedImage(project.image)
+                  }
+                >
                   {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}
+                  />
 
                   {hasRealImage ? (
                     <>
@@ -194,10 +252,24 @@ export default function Projects() {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className={`object-cover transition-transform duration-500 group-hover:scale-110 ${isImageLoaded[project.id] ? "opacity-100" : "opacity-0"}`}
+                        className={`object-cover transition-transform duration-500 group-hover:scale-110 ${
+                          isImageLoaded[project.id]
+                            ? "opacity-100"
+                            : "opacity-0"
+                        }`}
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        onLoad={() => setIsImageLoaded(prev => ({ ...prev, [project.id]: true }))}
-                        onError={() => setIsImageLoaded(prev => ({ ...prev, [project.id]: true }))}
+                        onLoad={() =>
+                          setIsImageLoaded((prev) => ({
+                            ...prev,
+                            [project.id]: true,
+                          }))
+                        }
+                        onError={() =>
+                          setIsImageLoaded((prev) => ({
+                            ...prev,
+                            [project.id]: true,
+                          }))
+                        }
                       />
                       {/* Zoom Icon Overlay */}
                       <motion.div
@@ -209,8 +281,18 @@ export default function Projects() {
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
                         >
-                          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                          <svg
+                            className="w-6 h-6 text-white"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                            />
                           </svg>
                         </motion.div>
                       </motion.div>
@@ -221,7 +303,11 @@ export default function Projects() {
                       <motion.span
                         className="text-7xl select-none"
                         animate={{ rotate: [0, 5, -5, 0], scale: [1, 1.05, 1] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                        transition={{
+                          duration: 4,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
                       >
                         {project.image}
                       </motion.span>
@@ -241,40 +327,59 @@ export default function Projects() {
                   {/* Features */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.features.slice(0, 3).map((feature, i) => (
-                      <span key={i} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300 border border-slate-600/50">
+                      <span
+                        key={i}
+                        className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300 border border-slate-600/50"
+                      >
                         ✓ {feature}
                       </span>
                     ))}
                     {project.features.length > 3 && (
-                      <span className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-400">+{project.features.length - 3} more</span>
+                      <span className="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-400">
+                        +{project.features.length - 3} more
+                      </span>
                     )}
                   </div>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, i) => (
-                      <span key={i} className={`px-3 py-1 bg-gradient-to-r ${project.gradient} bg-opacity-20 rounded-full text-xs text-slate-300 border border-slate-700/50`}>
+                      <span
+                        key={i}
+                        className={`px-3 py-1 bg-gradient-to-r ${project.gradient} bg-opacity-20 rounded-full text-xs text-slate-300 border border-slate-700/50`}
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
-                    <motion.a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} rounded-lg text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg`}
-                      whileHover={{ scale: 1.02, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      Live Demo
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </motion.a>
-                    {project.github !== "#" && (
+                  {project.id !== 8 && (
+                    <div className="flex gap-3">
+                      <motion.a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r ${project.gradient} rounded-lg text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg`}
+                        whileHover={{ scale: 1.02, y: -2 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        {t("liveDemo")}
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"
+                          />
+                        </svg>
+                      </motion.a>
+                      {/* {project.github !== "#" && (
                       <motion.a
                         href={project.github}
                         target="_blank"
@@ -285,8 +390,9 @@ export default function Projects() {
                       >
                         Code
                       </motion.a>
-                    )}
-                  </div>
+                    )} */}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             );
@@ -301,9 +407,11 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold mb-4 text-slate-100">Want to see more?</h3>
+          <h3 className="text-2xl font-bold mb-4 text-slate-100">
+            {t("viewMore")}
+          </h3>
           <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-            Explore more projects and code samples on my GitHub profile
+            {t("viewMoreDesc")}
           </p>
           <motion.a
             href="https://github.com/kero571-adel"
@@ -316,7 +424,7 @@ export default function Projects() {
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
-            View All Projects on GitHub
+            {t("githubCTA")}
           </motion.a>
         </motion.div>
       </div>
@@ -338,13 +446,26 @@ export default function Projects() {
             {/* Close Button */}
             <motion.button
               className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-white border border-slate-600 transition-colors"
-              onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label="Close image preview"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </motion.button>
 
@@ -374,7 +495,9 @@ export default function Projects() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Click anywhere or press <kbd className="px-2 py-1 bg-slate-700 rounded text-xs">Esc</kbd> to close
+              {t("lightbox.hint")}{" "}
+              <kbd className="px-2 py-1 bg-slate-700 rounded text-xs">Esc</kbd>{" "}
+              to close
             </motion.p>
           </motion.div>
         )}

@@ -1,24 +1,25 @@
+// components/Footer.jsx
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl"; // ✅ تم الاستيراد
 
 export default function Footer() {
+  const t = useTranslations("footer"); // ✅ تم تعريف الترجمة
   const currentYear = new Date().getFullYear();
 
+  // ✅ روابط الفوتر مع الترجمة
   const footerLinks = {
-    Navigation: [
-      { label: "Home", href: "#" },
-      { label: "About", href: "#about" },
-      { label: "Skills", href: "#skills" },
-      { label: "Projects", href: "#projects" },
+    navigation: [
+      { label: t("links.home"), href: "#" },
+      { label: t("links.about"), href: "#about" },
+      { label: t("links.skills"), href: "#skills" },
+      { label: t("links.projects"), href: "#projects" },
     ],
-    Resources: [
-      { label: "GitHub", href: "https://github.com/kero571-adel" },
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/keroles-adel-08020b332/",
-      },
-      { label: "Contact", href: "#contact" },
+    resources: [
+      { label: t("links.github"), href: "https://github.com/kero571-adel" },
+      { label: t("links.linkedin"), href: "https://www.linkedin.com/in/keroles-adel-08020b332/" },
+      { label: t("links.contact"), href: "#contact" },
     ],
   };
 
@@ -26,10 +27,7 @@ export default function Footer() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
     },
   };
 
@@ -43,8 +41,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-slate-700/50 glass backdrop-blur-md p-3">
-      <div className="container-max py-16">
+    <footer className="relative border-t border-slate-700/50 bg-slate-900/80 backdrop-blur-md p-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Footer Content Grid */}
         <motion.div
           className="grid md:grid-cols-4 gap-12 mb-12"
@@ -54,69 +52,80 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           {/* Brand Section */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold gradient-text mb-3">
-              Keroles Adel
+          <motion.div variants={itemVariants} className="md:col-span-2">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-3">
+              {t("brand.name")}
             </h3>
             <p className="text-slate-400 leading-relaxed text-sm">
-              Front-End Developer specializing in React.js and Next.js,
-              passionate about
+              {t("brand.desc1")} <br />
+              <span className="text-slate-300">{t("brand.desc2")}</span>
             </p>
             <p className="text-slate-500 text-xs mt-4">
-              © {currentYear} All rights reserved.
+              {t("brand.copyright", { year: currentYear })} {/* ✅ تمرير المتغير */}
             </p>
           </motion.div>
 
           {/* Navigation Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <motion.div key={title} variants={itemVariants}>
-              <h4 className="text-lg font-bold text-slate-100 mb-4">{title}</h4>
-              <ul className="space-y-2">
-                {links.map((link, index) => (
-                  <motion.li
-                    key={index}
-                    whileHover={{ x: 4 }}
-                    transition={{ type: "spring", stiffness: 400 }}
+          <motion.div variants={itemVariants}>
+            <h4 className="text-lg font-bold text-slate-100 mb-4">
+              {t("links.navigation")}
+            </h4>
+            <ul className="space-y-2">
+              {footerLinks.navigation.map((link, index) => (
+                <motion.li
+                  key={index}
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <a
+                    href={link.href}
+                    className="text-slate-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
                   >
-                    <a
-                      href={link.href}
-                      target={link.href.startsWith("http") ? "_blank" : "_self"}
-                      rel={
-                        link.href.startsWith("http")
-                          ? "noopener noreferrer"
-                          : ""
-                      }
-                      className="text-slate-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
-                    >
-                      {link.label}
-                      {link.href.startsWith("http") && (
-                        <motion.svg
-                          className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          animate={{ x: [0, 3, 0] }}
-                          transition={{
-                            duration: 1.5,
-                            repeat: Infinity,
-                            delay: 0.2,
-                          }}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13 7l5 5m0 0l-5 5m5-5H6"
-                          />
-                        </motion.svg>
-                      )}
-                    </a>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+                    {link.label}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Resources Links */}
+          <motion.div variants={itemVariants}>
+            <h4 className="text-lg font-bold text-slate-100 mb-4">
+              {t("links.resources")}
+            </h4>
+            <ul className="space-y-2">
+              {footerLinks.resources.map((link, index) => (
+                <motion.li
+                  key={index}
+                  whileHover={{ x: 4 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <a
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : "_self"}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : ""}
+                    className="text-slate-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
+                  >
+                    {link.label}
+                    {link.href.startsWith("http") && (
+                      <motion.svg
+                        className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        animate={{ x: [0, 3, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </motion.svg>
+                    )}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
         </motion.div>
+
         {/* Divider */}
         <div className="border-t border-slate-700/50 py-8">
           <motion.div
@@ -126,16 +135,26 @@ export default function Footer() {
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <p>
-              Built with <span className="text-red-500">❤️</span> using Next.js,
-              React & Tailwind CSS
+            {/* Credits with Heart Icon */}
+            <p className="flex items-center gap-1">
+              {t("credits").split("<heart/>")[0]}
+              <motion.span
+                className="text-red-500"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+              >
+                ❤️
+              </motion.span>
+              {t("credits").split("<heart/>")[1]}
             </p>
+
+            {/* Legal Links */}
             <div className="flex gap-6">
               <a href="#" className="hover:text-blue-400 transition-colors">
-                Privacy Policy
+                {t("legal.privacy")}
               </a>
               <a href="#" className="hover:text-blue-400 transition-colors">
-                Terms of Service
+                {t("legal.terms")}
               </a>
             </div>
           </motion.div>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import { useTranslations } from "next-intl";
 export default function HeroDesktop() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -15,6 +15,7 @@ export default function HeroDesktop() {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
+  const t = useTranslations("hero");
 
   // Animation variants
   const containerVariants = {
@@ -45,7 +46,7 @@ export default function HeroDesktop() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 px-4 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-20 px-1 overflow-hidden">
       {/* Animated Background Gradient Circle */}
       <motion.div
         className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gradient-to-br from-blue-500 via-purple-400 to-blue-300 blur-3xl opacity-30"
@@ -79,15 +80,14 @@ export default function HeroDesktop() {
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            
             <motion.div variants={itemVariants} className="space-y-2">
-              <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight">
-                <span className="text-slate-100">I'm </span>
-                <span className="gradient-text">Keroles Adel</span>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                <span className="text-slate-100">{t("greeting")} </span>
+                <span className="gradient-text">{t("name")}</span>
                 <span className="text-slate-100">,</span>
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-200">
-                Front-End Developer
+                {t("role")}
               </h2>
             </motion.div>
 
@@ -102,7 +102,7 @@ export default function HeroDesktop() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View My Work
+               {t("viewWork")}
               </motion.button>
 
               <motion.button
@@ -111,7 +111,7 @@ export default function HeroDesktop() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Contact Me
+                {t("contactMe")}
               </motion.button>
             </motion.div>
           </motion.div>

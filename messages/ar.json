@@ -1,0 +1,303 @@
+{
+  "nav": {
+    "about": "نبذة عنى",
+    "skills": "مهاراتي",
+    "projects": "مشاريعي",
+    "experience": "خبراتي",
+    "contact": "تواصل",
+    "cta": "تواصل معى",
+    "toggleLanguage": "تغيير اللغة",
+    "switchToArabic": "العربية",
+    "switchToEnglish": "English",
+    "arabic": "🇸🇦 العربية",
+    "english": "🇬🇧 English",
+    "closeMenu": "إغلاق",
+    "openMenu": "القائمة"
+  },
+  "hero": {
+    "greeting": " أنا",
+    "name": "كيرلس عادل",
+    "role": "مطوّر واجهات أمامية",
+    "viewWork": "شاهد أعمالي",
+    "contactMe": "تواصل معي",
+    "helloBadge": "أهلاً!",
+    "projectsBtn": "المشاريع",
+    "hireMeBtn": "وظّفني",
+    "altProfile": "صورة كيرلس عادل"
+  },
+  "about": {
+    "title": "نبذه عنى",
+    "paragraph1": "مطوّر واجهات أمامية متخصص في React.js وNext.js، طالب علوم حاسب بخبرة عملية مكتسبة من التدريب مع فرق تقنية دولية.",
+    "paragraph2": "أبني تطبيقات ويب سريعة وقابلة للتوسع باستخدام أحدث التقنيات: React، Next.js، Tailwind CSS، وRedux Toolkit.",
+    "paragraph3": "لا أركّز فقط على الشكل، بل على طريقة تفاعل المستخدم مع الموقع، بحيث يكون كل عنصر له هدف واضح في جذب الانتباه وتحقيق نتائج.",
+    "highlights": {
+      "react": "تطوير بـ React وNext.js",
+      "responsive": "تطبيقات متجاوبة مع كل الأجهزة",
+      "ui": "واجهات احترافية بـ Tailwind وMUI",
+      "api": "تكامل مع REST APIs",
+      "redux": "إدارة الحالة بـ Redux Toolkit",
+      "code": "كود نظيف وقابل للتطوير"
+    },
+    "stats": {
+      "projects": "مشروع مكتمل",
+      "internships": "تدريب احترافي",
+      "technologies": "تقنية أتقنها"
+    },
+    "quickFacts": {
+      "title": "بطاقة تعريفية",
+      "location": "الموقع",
+      "locationValue": "القاهرة، مصر 🇪🇬",
+      "availability": "الحالة",
+      "availabilityValue": "متاح لفرص Front-End",
+      "stack": "التقنيات المفضلة",
+      "stackValue": "React, Next.js, TypeScript",
+      "response": "وقت الرد",
+      "responseValue": "عادةً خلال 12 ساعة"
+    },
+    "cta": "لنبني شيئًا معًا",
+    "approach": {
+      "planning": {
+        "title": "التخطيط",
+        "desc": "أدرس متطلبات المشروع وأضع النهج التقني الأمثل من البداية."
+      },
+      "development": {
+        "title": "التطوير",
+        "desc": "أبني واجهات متجاوبة وقابلة للتوسع بأحدث الأدوات والممارسات."
+      },
+      "optimization": {
+        "title": "التحسين",
+        "desc": "أرفع مستوى الأداء وإمكانية الوصول وأحسن تجربة المستخدم."
+      }
+    }
+  },
+  "skills": {
+    "title": "مهاراتي التقنية",
+    "subtitle": "التقنيات التي أعتمد عليها يوميًا لبناء مشاريع احترافية",
+    "categories": {
+      "frontend": {
+        "title": "تطوير الواجهات",
+        "icon": "💻"
+      },
+      "styling": {
+        "title": "التصميم والأنماط",
+        "icon": "🎨"
+      },
+      "tools": {
+        "title": "الأدوات والمنصات",
+        "icon": "🛠️"
+      }
+    },
+    "frontend": {
+      "react": "React.js",
+      "nextjs": "Next.js",
+      "javascript": "JavaScript (ES6+)",
+      "typescript": "TypeScript",
+      "html5": "HTML5",
+      "css3": "CSS3"
+    },
+    "styling": {
+      "tailwind": "Tailwind CSS",
+      "mui": "Material UI",
+      "shadcn": "ShadCN UI",
+      "bootstrap": "Bootstrap",
+      "sass": "SASS",
+      "responsive": "تصميم متجاوب"
+    },
+    "tools": {
+      "git": "Git",
+      "github": "GitHub",
+      "postman": "Postman",
+      "figma": "Figma",
+      "vercel": "Vercel",
+      "netlify": "Netlify"
+    },
+    "traits": {
+      "quickLearner": {
+        "title": "سريع التعلم",
+        "desc": "أتكيّف مع التقنيات الجديدة بسرعة وأطبقها فورًا في مشاريعي."
+      },
+      "bestPractices": {
+        "title": "معايير احترافية",
+        "desc": "أتبع أفضل ممارسات البرمجة وأحرص على كود نظيف وقابل للصيانة."
+      },
+      "continuousGrowth": {
+        "title": "تطور مستمر",
+        "desc": "التعلم المستمر وتحسين المهارات جزء أساسي من روتيني اليومي."
+      },
+      "userFocus": {
+        "title": "فهم سلوك المستخدم",
+        "desc": "تصميم واجهات مبنية على فهم المستخدم لزيادة التفاعل وتحقيق نتائج أفضل."
+      }
+    }
+  },
+  "projects": {
+    "title": "أبرز مشاريعي",
+    "subtitle": "نماذج من أعمالي تعكس مستواي التقني واهتمامي بالتفاصيل",
+    "liveDemo": "مشاهدة الموقع",
+    "code": "الكود",
+    "viewMore": "تريد المزيد؟",
+    "viewMoreDesc": "تصفح بقية مشاريعي وعينات الكود على GitHub",
+    "githubCTA": "كل مشاريعي على GitHub",
+    "lightbox": {
+      "close": "إغلاق المعاينة",
+      "hint": "اضغط في أي مكان أو Esc للإغلاق"
+    },
+    "features": {
+      "more": "أخرى"
+    },
+    "projects": {
+      "studytrack": {
+        "title": "StudyTrack – لوحة إدارة الدراسة",
+        "desc": "داشبورد تفاعلي لإدارة المهام الدراسية وتتبع التقدم مع تكامل Firebase."
+      },
+      "restaurant": {
+        "title": "تطبيق مطعم",
+        "desc": "تطبيق عصري لاستعراض القائمة وإدارة طلبات السلة مع انيميشن سلس."
+      },
+      "ecommerce": {
+        "title": "متجر إلكتروني",
+        "desc": "متجر متكامل مع سلة تسوق وراوتنج ديناميكي وإدارة الحالة بـ React Context."
+      },
+      "weather": {
+        "title": "موقع الطقس",
+        "desc": "تطبيق طقس يعمل في الوقت الفعلي مع بحث متقدم وتكامل كامل مع Weather API."
+      },
+      "facebook": {
+        "title": " منصة تواصل اجتماعي",
+        "desc": "محاكاة لمنصة اجتماعية مع نظام منشورات، مصادقة مستخدمين، وتكامل ديناميكي مع APIs."
+      },
+      "pharmacy": {
+        "title": "Landing Page  لصيدليه",
+        "desc": "صفحة هبوط بـ Next.js مصممة لسوق صعيد مصر، مع دعم عربي وRTL كامل، SEO منظّم، وعرض واضح للخدمات كالتوصيل 24/7 والاستشارات الطبية."
+      },
+      "fullstack": {
+        "title": "تطبيق Full-Stack بـ Next.js",
+        "desc": "تطبيق متكامل بـ Next.js وPrisma وMySQL مع Server-Side Rendering وعمليات CRUD كاملة."
+      },
+      "safarni": {
+        "title": "سفرني – منصة حجز رحلات",
+        "desc": "منصة حجز سفر متكاملة مع تدفق حجز رحلات، بوابة دفع آمنة، وإدارة حالة بـ Redux Toolkit."
+      }
+    }
+  },
+  "experience": {
+    "title": "مساري المهني والتعليمي",
+    "subtitle": "محطات تدريب وتعلّم شكّلت خبرتي في تطوير الواجهات الأمامية",
+    "sections": {
+      "professional": "الخبرة العملية",
+      "education": "التعليم والشهادات",
+      "continuousLearning": "التعلم المستمر"
+    },
+    "viewCertificate": "عرض الشهادة",
+    "learningPoints": [
+      "أتابع أحدث تقنيات الـ Frontend وأطبقها في مشاريعي الجانبية",
+      "أبني مشاريع شخصية باستمرار لتقويه مهاراتي وتجربة أفكار جديدة",
+      "ألتزم بأفضل ممارسات React وNext.js في كل ما أكتبه",
+      "أركّز على حل المشكلات بكفاءة وكتابة كود واضح وقابل للتوسع",
+      "تعلّم سلوك المستخدم والتحويل"
+    ],
+    "internships": {
+      "huma": {
+        "title": "متدرب – تطوير واجهات أمامية",
+        "company": "Huma-Volve (عن بُعد)",
+        "duration": "نوفمبر – ديسمبر 2025",
+        "desc": "عملت على منصتين ضخمتين (طبية وسفر) باستخدام تقنيات حديثة مع التركيز على الأداء والقابلية للتوسع وجودة الكود.",
+        "responsibilities": [
+          "بناء نظام مصادقة كامل: تسجيل دخول، إنشاء حساب، تحقق من المدخلات، وحماية الراوتات",
+          "تطوير المكونات الأساسية: الصفحة الرئيسية، الـ Navigation، وتدفقات المستخدم",
+          "تنفيذ وحدات منصة السفر: الدفع، حجز الرحلات، الوجهات، المفضلة، والمقارنة",
+          "بناء مكونات معاد استخدامها وقابلة للتوسع بـ React وTypeScript وTailwind CSS",
+          "إدارة الـ Global State بـ Redux Toolkit",
+          "العمل ضمن فريق بـ Git Workflow: فروع، Pull Requests، ومراجعات كود"
+        ]
+      },
+      "saiket": {
+        "title": "متدرب – تطوير واجهات أمامية",
+        "company": "Saiket Systems (عن بُعد)",
+        "duration": "يونيو – يوليو 2025",
+        "desc": "طوّرت صفحات ويب تفاعلية مع تطبيق مبادئ UI/UX الحديثة والتركيز على الأداء وإمكانية الوصول.",
+        "responsibilities": [
+          "بناء صفحات ويب متجاوبة بـ HTML وCSS وJavaScript",
+          "تشخيص وإصلاح مشكلات الـ UI لتحسين تجربة المستخدم والأداء",
+          "تطبيق مبادئ Clean Code وهيكلة المكونات بشكل صحيح",
+          "المساهمة في تسليم ميزات جاهزة للإنتاج على مهام حقيقية",
+          "المشاركة في جلسات تقييم تقني وتطوير المهارات الشخصية"
+        ]
+      }
+    },
+    "education": {
+      "cs": {
+        "degree": "بكالوريوس علوم الحاسب",
+        "institution": "أكاديمية الشروق",
+        "year": "2022 – حتى الآن"
+      },
+      "react": {
+        "degree": "شهادة React.js",
+        "institution": "Udemy",
+        "year": "2024"
+      },
+      "nextjs": {
+        "degree": "شهادة Next.js",
+        "institution": "Udemy",
+        "year": "2025"
+      }
+    }
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "subtitle": "منفتح على فرص التدريب والعمل الحر والتعاون في مشاريع مثيرة.",
+    "connectTitle": "طرق التواصل",
+    "connectDesc": "مطوّر واجهات أمامية متخصص في React وNext.js، أدرس علوم الحاسب وأبحث دومًا عن فرص تدريب أو عمل حر أو تعاون في مشاريع. يسعدني تسمّع منك!",
+    "labels": {
+      "email": "البريد الإلكتروني",
+      "phone": "واتساب / هاتف",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    "form": {
+      "name": "الاسم *",
+      "email": "البريد الإلكتروني *",
+      "subject": "الموضوع *",
+      "message": "الرسالة *",
+      "placeholders": {
+        "name": "أحمد محمد",
+        "email": "ahmed@example.com",
+        "subject": "فرصة تعاون",
+        "message": "أخبرني عن مشروعك أو استفسارك..."
+      }
+    },
+    "success": "تم الإرسال",
+    "button": {
+      "send": "إرسال الرسالة",
+      "sending": "جاري الإرسال..."
+    },
+    "errors": {
+      "failed": "تعذّر إرسال الرسالة. يرجى المحاولة مجددًا.",
+      "error": "حدث خطأ غير متوقع. يرجى إعادة المحاولة لاحقًا."
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "كيرلس عادل",
+      "desc1": "مطوّر واجهات أمامية متخصص في React وNext.js،",
+      "desc2": "أبني تجارب رقمية تجمع بين كود نظيف وتصميم يُلهم.",
+      "copyright": "© {year} جميع الحقوق محفوظة."
+    },
+    "links": {
+      "navigation": "روابط سريعة",
+      "resources": "حساباتي",
+      "home": "الرئيسية",
+      "about": "عني",
+      "skills": "المهارات",
+      "projects": "المشاريع",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "تواصل"
+    },
+    "credits": "صُمّم وبُني بـ ❤️ باستخدام Next.js وTailwind CSS",
+    "legal": {
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الاستخدام"
+    }
+  }
+}
