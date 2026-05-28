@@ -7,7 +7,6 @@ import { useTranslations } from "next-intl";
 export default function Projects() {
   const t = useTranslations("projects");
   const [selectedImage, setSelectedImage] = useState(null);
-  const [isImageLoaded, setIsImageLoaded] = useState({});
 
   // منع الـ Scroll عند فتح الـ Lightbox
   useEffect(() => {
@@ -299,33 +298,13 @@ export default function Projects() {
                   {hasRealImage ? (
                     <>
                       {/* Real Image */}
-                      {!isImageLoaded[project.id] && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-slate-800">
-                          <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
-                        </div>
-                      )}
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
-                        className={`object-cover transition-transform duration-500 group-hover:scale-110 ${
-                          isImageLoaded[project.id]
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        onLoad={() =>
-                          setIsImageLoaded((prev) => ({
-                            ...prev,
-                            [project.id]: true,
-                          }))
-                        }
-                        onError={() =>
-                          setIsImageLoaded((prev) => ({
-                            ...prev,
-                            [project.id]: true,
-                          }))
-                        }
+                        loading="lazy"
                       />
                       {/* Zoom Icon Overlay */}
                       <motion.div

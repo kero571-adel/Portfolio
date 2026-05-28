@@ -102,7 +102,7 @@ export default function HeroDesktop() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-               {t("viewWork")}
+                {t("viewWork")}
               </motion.button>
 
               <motion.button
@@ -147,7 +147,7 @@ export default function HeroDesktop() {
                   fill
                   className="object-cover"
                   priority
-                  sizes="(max-width: 640px) 100vw, 320px"
+                  sizes="320px"
                 />
               </div>
 

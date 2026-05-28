@@ -163,7 +163,8 @@ export default function About() {
               className="flex flex-wrap gap-4 mb-8 justify-between"
               variants={containerVariants}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -204,7 +205,8 @@ export default function About() {
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
+                viewport={{ once: true }}
               >
                 {quickFacts.map((item, i) => (
                   <motion.div

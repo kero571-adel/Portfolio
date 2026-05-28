@@ -149,7 +149,8 @@ export default function Skills() {
           className="grid md:grid-cols-2 gap-6 mb-16"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: false }}
           key={activeCategory}
         >
           {current.skills.map((skill, index) => (

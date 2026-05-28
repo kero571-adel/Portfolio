@@ -142,6 +142,7 @@ export default function HeroMobile() {
             fill
             className="object-contain object-bottom"
             priority
+            sizes="340px"
           />
         </motion.div>
 

@@ -18,7 +18,10 @@ export default function Footer() {
     ],
     resources: [
       { label: t("links.github"), href: "https://github.com/kero571-adel" },
-      { label: t("links.linkedin"), href: "https://www.linkedin.com/in/keroles-adel-08020b332/" },
+      {
+        label: t("links.linkedin"),
+        href: "https://www.linkedin.com/in/keroles-adel-08020b332/",
+      },
       { label: t("links.contact"), href: "#contact" },
     ],
   };
@@ -61,7 +64,8 @@ export default function Footer() {
               <span className="text-slate-300">{t("brand.desc2")}</span>
             </p>
             <p className="text-slate-500 text-xs mt-4">
-              {t("brand.copyright", { year: currentYear })} {/* ✅ تمرير المتغير */}
+              {t("brand.copyright", { year: currentYear })}{" "}
+              {/* ✅ تمرير المتغير */}
             </p>
           </motion.div>
 
@@ -103,21 +107,24 @@ export default function Footer() {
                   <a
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : "_self"}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : ""}
+                    rel={
+                      link.href.startsWith("http") ? "noopener noreferrer" : ""
+                    }
                     className="text-slate-400 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center gap-1 group"
                   >
                     {link.label}
                     {link.href.startsWith("http") && (
-                      <motion.svg
-                        className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        animate={{ x: [0, 3, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
+                      <svg
+                        className="w-3 h-3 opacity-0 group-hover:opacity-100 
+                      transition-all group-hover:translate-x-1"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </motion.svg>
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
                     )}
                   </a>
                 </motion.li>
