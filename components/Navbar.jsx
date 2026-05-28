@@ -97,7 +97,7 @@ export default function Navbar({ scrolled }) {
           </span>
         </motion.button>
 
-        {/* Desktop Menu - ستايل الكود القديم */}
+        {/* Desktop Menu */}
         <motion.div
           className="hidden md:flex gap-8 items-center glass backdrop-blur-md px-6 py-2 rounded-lg"
           variants={containerVariants}

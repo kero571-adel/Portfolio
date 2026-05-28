@@ -107,10 +107,10 @@ export default function HeroMobile() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative mb-8 text-center z-10 w-full px-2"
+          className="relative mb-4 text-center z-10 w-full px-2"
         >
           {/* Decorative strokes left */}
-          <div className="absolute left-0 md:left-6 -bottom-6 text-orange-400"></div>
+          <div className="absolute left-0 md:left-6 -bottom-4 text-orange-400"></div>
           <h3 className="text-[clamp(1.75rem,5vw,3rem)] font-bold leading-tight">
             {t("greeting")} <span className="text-orange-400">{t("name")}</span>
             ,<br />
@@ -125,7 +125,7 @@ export default function HeroMobile() {
         <motion.div
           animate={{ backgroundColor: "#46444475" }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute w-screen h-[380px] md:w-[100%] md:h-[480px] rounded-t-full bottom-0 z-10 overflow-hidden"
+          className="absolute w-screen h-[300px] rounded-t-full bottom-0 z-10 overflow-hidden"
           style={{ left: "50%", transform: "translateX(-50%)" }}
         ></motion.div>
 
@@ -134,10 +134,10 @@ export default function HeroMobile() {
           variants={imageVariants}
           initial="hidden"
           animate="visible"
-          className="relative bottom-0 w-[340px] h-[480px] md:w-[420px] md:h-[580px] z-20 pointer-events-none mb-0"
+          className="relative bottom-0 w-[340px] h-[420px] z-20 pointer-events-none mb-0"
         >
           <Image
-            src="/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png"
+            src="/logo.png"
             alt="profile"
             fill
             className="object-contain object-bottom"

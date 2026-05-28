@@ -150,6 +150,10 @@
         "title": "StudyTrack – Study Management Dashboard",
         "desc": "Interactive study dashboard with task management, progress tracking, and Firebase integration."
       },
+      "eduplatform": {
+        "title": "EduPlatform – Learning Management System",
+        "desc": "A full-featured education platform for managing courses, students, and interactive dashboards with authentication system."
+      },
       "restaurant": {
         "title": "Restaurant Web App",
         "desc": "Modern restaurant application with menu browsing, cart system, and smooth animations."
@@ -158,9 +162,29 @@
         "title": "E-Commerce Store",
         "desc": "Fully functional e-commerce application with cart management, routing system, and dynamic state handling using React Context."
       },
+      "doctormate": {
+        "title": "DoctorMate – Doctor Dashboard",
+        "desc": "A professional healthcare dashboard for managing patients, appointments, chats, and video consultations using Firebase and Agora RTC.",
+        "features": {
+          "feature1": "Patient & Appointment Management",
+          "feature2": "Real-time Chat with Firebase",
+          "feature3": "Voice & Video Calls using Agora RTC",
+          "feature4": "Responsive Interactive Dashboard"
+        }
+      },
       "weather": {
         "title": "Weather ",
         "desc": "Real-time weather  with API integration, search functionality, and advanced state handling."
+      },
+      "devwear": {
+        "title": "DevWear – Developer Brand Experience",
+        "desc": "An interactive developer-inspired fashion brand with an owner dashboard for managing orders and tracking activity.",
+        "features": {
+          "feature1": "Programming Inspired Design",
+          "feature2": "Interactive User Experience",
+          "feature3": "Owner Dashboard & Order Management",
+          "feature4": "Higher Engagement & Conversion"
+        }
       },
       "facebook": {
         "title": "Facebook Clone",

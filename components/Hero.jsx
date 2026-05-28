@@ -10,13 +10,10 @@ export default function Hero() {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };
-    // تعيين الحجم الأولي
     handleResize();
-    // الاستماع لتغيير حجم الشاشة
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  // تجنب hydration mismatch
   if (!isLoaded) {
     return null;
   }

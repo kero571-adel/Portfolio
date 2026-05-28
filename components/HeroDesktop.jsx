@@ -142,7 +142,7 @@ export default function HeroDesktop() {
             >
               <div className="relative w-full h-full  overflow-hidden ">
                 <Image
-                  src="/WhatsApp Image 2026-03-15 at 4.35.19 PM-Photoroom.png"
+                  src="/logo.png"
                   alt="Keroles Adel"
                   fill
                   className="object-cover"
