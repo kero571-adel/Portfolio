@@ -28,9 +28,9 @@ export const metadata = {
   keywords: "Developer, Portfolio, Full Stack, React, Next.js, JavaScript",
   authors: [{ name: "Keroles Adel" }],
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
-    shortcut: "/logo.png",
+    icon: "/icon.png",
+    apple: "/icon.png",
+    shortcut: "/icon.png",
   },
   openGraph: {
     title: "Keroles Adel | Frontend Developer",
