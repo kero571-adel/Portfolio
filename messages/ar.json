@@ -36,7 +36,9 @@
       "ui": "واجهات احترافية بـ Tailwind وMUI",
       "api": "تكامل مع REST APIs",
       "redux": "إدارة الحالة بـ Redux Toolkit",
-      "code": "كود نظيف وقابل للتطوير"
+      "testing": "اختبار الواجهات بـ Vitest وRTL",
+      "performance": "أداء الويب وCore Web Vitals",
+      "seo": "Technical SEO وStructured Data"
     },
     "stats": {
       "projects": "مشروع مكتمل",
@@ -52,7 +54,7 @@
       "stack": "التقنيات المفضلة",
       "stackValue": "React, Next.js, TypeScript",
       "response": "وقت الرد",
-      "responseValue": "عادةً خلال 12 ساعة"
+      "responseValue": "عادةً خلال 1 ساعة"
     },
     "cta": "لنبني شيئًا معًا",
     "approach": {
@@ -72,7 +74,7 @@
   },
   "skills": {
     "title": "مهاراتي التقنية",
-    "subtitle": "التقنيات التي أعتمد عليها يوميًا لبناء مشاريع احترافية",
+    "subtitle": "تقنيات وممارسات أعتمد عليها لبناء مشاريع ويب حديثة وموثوقة",
     "categories": {
       "frontend": {
         "title": "تطوير الواجهات",
@@ -81,6 +83,10 @@
       "styling": {
         "title": "التصميم والأنماط",
         "icon": "🎨"
+      },
+      "quality": {
+        "title": "الاختبار وجودة الويب",
+        "icon": "⚡"
       },
       "tools": {
         "title": "الأدوات والمنصات",
@@ -102,6 +108,12 @@
       "bootstrap": "Bootstrap",
       "sass": "SASS",
       "responsive": "تصميم متجاوب"
+    },
+    "quality": {
+      "testing": "Vitest وReact Testing Library",
+      "performance": "Core Web Vitals وأداء الويب",
+      "seo": "Technical SEO وStructured Data",
+      "geo": "مبادئ GEO"
     },
     "tools": {
       "git": "Git",

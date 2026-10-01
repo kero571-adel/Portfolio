@@ -22,6 +22,7 @@ export default function Skills() {
         { name: t("frontend.css3"), level: 90, icon: "🎨" },
       ],
     },
+
     styling: {
       title: t("categories.styling.title"),
       icon: t("categories.styling.icon"),
@@ -35,6 +36,35 @@ export default function Skills() {
         { name: t("styling.responsive"), level: 90, icon: "📱" },
       ],
     },
+
+    quality: {
+      title: t("categories.quality.title"),
+      icon: t("categories.quality.icon"),
+      color: "from-cyan-500 to-blue-500",
+      skills: [
+        {
+          name: t("quality.testing"),
+          level: 85,
+          icon: "🧪",
+        },
+        {
+          name: t("quality.performance"),
+          level: 85,
+          icon: "⚡",
+        },
+        {
+          name: t("quality.seo"),
+          level: 80,
+          icon: "🔎",
+        },
+        {
+          name: t("quality.geo"),
+          level: 75,
+          icon: "🤖",
+        },
+      ],
+    },
+
     tools: {
       title: t("categories.tools.title"),
       icon: t("categories.tools.icon"),

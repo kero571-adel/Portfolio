@@ -36,7 +36,9 @@ export default function About() {
     t("highlights.ui"),
     t("highlights.api"),
     t("highlights.redux"),
-    t("highlights.code"),
+    t("highlights.testing"),
+    t("highlights.performance"),
+    t("highlights.seo"),
   ];
   const quickFacts = [
     {

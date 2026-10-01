@@ -28,7 +28,7 @@
   "about": {
     "title": "About Me",
     "paragraph1": "I'm a Front-End Developer specializing in React.js and Next.js. Currently studying Computer Science while gaining real-world experience through internships with international tech teams.",
-    "paragraph2": "I focus on building responsive, scalable, and high-performance web applications using modern technologies like React, Next.js, Tailwind CSS, and Redux Toolkit.",
+    "paragraph2": "I focus on building responsive, scalable, and high-performance web applications using React, Next.js, Tailwind CSS, and Redux Toolkit, with practical experience in testing, web performance, and technical SEO.",
     "paragraph3": "I focus not only on building interfaces, but also on how users interact with them — ensuring every element serves a purpose, whether it's engagement, clarity, or conversion.",
     "highlights": {
       "react": "React & Next.js Development",
@@ -36,7 +36,9 @@
       "ui": "Modern UI with Tailwind & MUI",
       "api": "REST API Integration",
       "redux": "Redux Toolkit State Management",
-      "code": "Clean & Scalable Code"
+      "testing": "Frontend Testing with Vitest & RTL",
+      "performance": "Web Performance & Core Web Vitals",
+      "seo": "Technical SEO & Structured Data"
     },
     "stats": {
       "projects": "Projects Built",
@@ -52,7 +54,7 @@
       "stack": "Preferred Stack",
       "stackValue": "React, Next.js, TypeScript",
       "response": "Response Time",
-      "responseValue": "Usually within 12 hours"
+      "responseValue": "Usually within 1 hours"
     },
     "cta": "Let's Work Together",
     "approach": {
@@ -72,7 +74,7 @@
   },
   "skills": {
     "title": "Technical Skills",
-    "subtitle": "Technologies and tools I use to build modern web applications",
+    "subtitle": "Technologies and practices I use to build modern, reliable, and high-quality web applications",
     "categories": {
       "frontend": {
         "title": "Frontend Development",
@@ -81,6 +83,10 @@
       "styling": {
         "title": "Styling & UI",
         "icon": "🎨"
+      },
+      "quality": {
+        "title": "Testing & Web Quality",
+        "icon": "⚡"
       },
       "tools": {
         "title": "Tools & Platforms",
@@ -103,6 +109,13 @@
       "sass": "SASS",
       "responsive": "Responsive Design"
     },
+    "quality": {
+      "testing": "Vitest & React Testing Library",
+      "performance": "Core Web Vitals & Web Performance",
+      "seo": "Technical SEO & Structured Data",
+      "geo": "GEO Fundamentals"
+    },
+
     "tools": {
       "git": "Git",
       "github": "GitHub",

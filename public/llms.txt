@@ -1,0 +1,21 @@
+# Keroles Adel - Frontend Developer
+
+> Portfolio of Keroles Adel, a Front-End Developer specializing in React.js and Next.js, based in Egypt. The site is available in English and Arabic and showcases projects, skills, internships, and certificates.
+
+## Portfolio
+
+- [Portfolio (English)](https://kerolesadel.vercel.app/en): Full portfolio in English
+- [Portfolio (Arabic)](https://kerolesadel.vercel.app/ar): Full portfolio in Arabic (RTL)
+
+## Sections
+
+- [About](https://kerolesadel.vercel.app/en#about): Background, quick facts, and development approach
+- [Skills](https://kerolesadel.vercel.app/en#skills): Frontend, styling, and tooling skills
+- [Projects](https://kerolesadel.vercel.app/en#projects): Selected projects with live demos
+- [Experience](https://kerolesadel.vercel.app/en#experience): Internships, education, and certificates
+- [Contact](https://kerolesadel.vercel.app/en#contact): Contact form and contact details
+
+## Profiles
+
+- [GitHub](https://github.com/kero571-adel): Source code and repositories
+- [LinkedIn](https://www.linkedin.com/in/keroles-adel-08020b332/): Professional profile

@@ -83,7 +83,7 @@ export default function HeroDesktop() {
             <motion.div variants={itemVariants} className="space-y-2">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 <span className="text-slate-100">{t("greeting")} </span>
-                <span className="gradient-text">{t("name")}</span>
+                <span style={{ color: "#FFA96A" }}>{t("name")}</span>
                 <span className="text-slate-100">,</span>
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-200">
@@ -138,7 +138,6 @@ export default function HeroDesktop() {
             <motion.div
               className="relative w-80 h-96 z-10"
               variants={floatingVariants}
-              animate="animate"
             >
               <div className="relative w-full h-full  overflow-hidden ">
                 <Image
@@ -150,23 +149,6 @@ export default function HeroDesktop() {
                   sizes="320px"
                 />
               </div>
-
-              {/* Decorative elements */}
-              <motion.div
-                className="absolute -top-10 -right-10 text-6xl opacity-50"
-                animate={{ rotate: [0, 20, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                ✨
-              </motion.div>
-
-              <motion.div
-                className="absolute -bottom-5 -left-5 text-5xl opacity-50"
-                animate={{ rotate: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-              >
-                💫
-              </motion.div>
             </motion.div>
           </motion.div>
         </div>
