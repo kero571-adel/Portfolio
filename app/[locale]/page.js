@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { useState, useEffect } from "react";
+import Brands from "@/components/Brands";
 // الأقسام اللي تحت الـ fold بتتقسم لـ chunks منفصلة (لسه بتتعمل render في الـ HTML بتاع السيرفر)
 // ده بيقلل الـ JS اللي بيتنفذ في التحميل الأول (Unused JS + Main thread work)
 const About = dynamic(() => import("@/components/About"));
@@ -33,6 +34,7 @@ export default function Home() {
         <AnimatedBackground />
         <Navbar scrolled={scrolled} />
         <Hero />
+        <Brands />
         <About />
         <Skills />
         <Projects />

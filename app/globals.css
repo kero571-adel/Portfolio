@@ -125,7 +125,7 @@ button {
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -133,7 +133,7 @@ button {
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .glass {
     background-color: #232323c3;
@@ -416,4 +416,24 @@ code {
     background: white;
     color: black;
   }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+  will-change: transform;
+}
+
+/* يقف لما المستخدم يقف عليه */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* احترام إعداد تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  .marquee { overflow-x: auto; }
 }

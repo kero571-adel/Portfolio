@@ -155,8 +155,39 @@
       "close": "Close image preview",
       "hint": "Click anywhere or press Esc to close"
     },
-    "features": {
-      "more": "more"
+    "features": { "more": "more" },
+    "categories": {
+      "all": "All",
+      "platform": "Web Apps & Platforms",
+      "ecommerce": "E-commerce & Ordering",
+      "landing": "Landing Pages",
+      "ugc": "UGC Creators",
+      "media": "Photo & Video",
+      "portfolio": "Portfolios"
+    },
+    "ui": {
+      "preview": "Live Preview",
+      "open": "Open site",
+      "desktop": "Desktop",
+      "mobile": "Mobile",
+      "loading": "Loading preview…",
+      "closePreview": "Close preview",
+      "closeImage": "Close image preview",
+      "live": "Live",
+      "tabsLabel": "Project categories"
+    },
+    "sites": {
+      "desc": {
+        "ugc": "UGC creator portfolio showcasing brand collaborations and videos.",
+        "media": "Photography & videography portfolio showcasing projects.",
+        "portfolio": "Personal portfolio website.",
+        "dashboard": " Includes a dashboard to add and manage work."
+      },
+      "features": {
+        "responsive": "Responsive design",
+        "fast": "Fast loading",
+        "dashboard": "Admin dashboard to add & manage work"
+      }
     },
     "projects": {
       "studytrack": {
@@ -168,8 +199,16 @@
         "desc": "A full-featured education platform for managing courses, students, and interactive dashboards with authentication system."
       },
       "restaurant": {
-        "title": "Restaurant Web App",
-        "desc": "Modern restaurant application with menu browsing, cart system, and smooth animations."
+        "title": "CrunchyBite – Online Food Ordering",
+        "desc": "Multi-page restaurant ordering app with menu browsing, cart system, and a checkout that sends the order straight to WhatsApp.",
+        "features": {
+          "feature1": "Multi-page ordering flow",
+          "feature2": "Cart system using Context API",
+          "feature3": "Checkout sends the order via WhatsApp",
+          "feature4": "Interactive food menu",
+          "feature5": "Smooth animations",
+          "feature6": "Responsive design"
+        }
       },
       "ecommerce": {
         "title": "E-Commerce Store",
@@ -186,8 +225,8 @@
         }
       },
       "weather": {
-        "title": "Weather ",
-        "desc": "Real-time weather  with API integration, search functionality, and advanced state handling."
+        "title": "Weather App",
+        "desc": "Real-time weather app with API integration, search functionality, and advanced state handling."
       },
       "devwear": {
         "title": "DevWear – Developer Brand Experience",
@@ -206,14 +245,6 @@
       "pharmacy": {
         "title": "Pharmacy Landing Page",
         "desc": "A conversion-focused pharmacy landing page built with Next.js, tailored for a pharmacy chain in Upper Egypt. Features Arabic RTL support, structured SEO data, and clear service presentation including 24/7 delivery and medical consultations."
-      },
-      "fullstack": {
-        "title": "Full-Stack Next.js App",
-        "desc": "Full-stack application built with Next.js, Prisma, and MySQL with server-side rendering and full CRUD operations."
-      },
-      "safarni": {
-        "title": "Safarni – Travel Booking Platform",
-        "desc": "Advanced travel booking platform with full flight booking flow, secure payment system, and dynamic state management using Redux Toolkit."
       }
     }
   },
@@ -336,5 +367,8 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     }
-  }
+  },
+  "brands": {
+  "title": "Trusted by creators & brands"
+}
 }
