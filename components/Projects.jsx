@@ -21,10 +21,10 @@ const CATEGORY_IDS = [
   "all",
   "platform",
   "ecommerce",
-  "landing",
-  "ugc",
-  "media",
   "portfolio",
+  "media",
+  "ugc",
+  "landing",
 ];
 const UI_KEYS = [
   "preview",
@@ -156,7 +156,7 @@ function buildProjects(t) {
       image: "/imageProject/WhatsApp Image 2026-03-22 at 3.17.54 PM.jpeg",
       tags: ["React", "React Router", "Context API", "Bootstrap"],
       category: "ecommerce",
-      link: "https://willowy-llama-affd20.netlify.app/",
+      link: "https://store-three-ten.vercel.app/",
       gradient: "from-green-500 to-emerald-500",
       features: [
         "Cart & User Interaction Management",
