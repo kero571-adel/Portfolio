@@ -210,9 +210,48 @@
           "feature6": "Responsive design"
         }
       },
+      "drtrend": {
+        "title": "Dr Trend – Medical Apparel Store",
+        "desc": "An online store for a medical apparel brand (scrubs and doctor coats) with product pages, cart and authentication, plus an admin dashboard to manage orders and update their status.",
+        "features": {
+          "feature1": "Product browsing with dedicated detail pages",
+          "feature2": "Cart system and user authentication",
+          "feature3": "Bilingual UI (Arabic/English) with full RTL support",
+          "feature4": "Admin dashboard to manage orders and update status"
+        }
+      },
+      "optivue": {
+        "title": "OptiVue – Prescription Eyeglasses",
+        "desc": "A premium prescription eyeglasses brand website with a modern design that presents products clearly and attractively.",
+        "features": {
+          "feature1": "Modern, premium design",
+          "feature2": "Responsive across all devices",
+          "feature3": "Fast loading"
+        }
+      },
       "ecommerce": {
         "title": "E-Commerce Store",
         "desc": "Fully functional e-commerce application with cart management, routing system, and dynamic state handling using React Context."
+      },
+      "eliteeats": {
+        "title": "EliteEats – Digital Restaurant Menu",
+        "desc": "A premium digital menu landing page for a restaurant, with categorized items, a cart, and a checkout that confirms the order directly via WhatsApp.",
+        "features": {
+          "feature1": "Categorized menu (burgers, pizza, drinks, desserts)",
+          "feature2": "Interactive order cart",
+          "feature3": "Order confirmation via WhatsApp",
+          "feature4": "Responsive across all devices"
+        }
+      },
+      "titanfitness": {
+        "title": "Titan Fitness – Full Gym Website",
+        "desc": "A multi-page fitness club website showcasing programs, trainers, classes and membership plans, with registration, contact, blog and gallery pages.",
+        "features": {
+          "feature1": "Dedicated pages for programs, classes and trainers",
+          "feature2": "Membership plans (Basic / Pro / Elite)",
+          "feature3": "Member registration and contact page",
+          "feature4": "Structured SEO and responsive design"
+        }
       },
       "doctormate": {
         "title": "DoctorMate – Doctor Dashboard",
@@ -369,6 +408,6 @@
     }
   },
   "brands": {
-  "title": "Trusted by creators & brands"
-}
+    "title": "Trusted by creators & brands"
+  }
 }
