@@ -20,8 +20,8 @@ import { CLIENT_SITE_DATA } from "../data/clientSites";
 const CATEGORY_IDS = [
   "all",
   "platform",
-  "ecommerce",
   "portfolio",
+  "ecommerce",
   "media",
   "ugc",
   "landing",
