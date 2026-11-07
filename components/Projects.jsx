@@ -18,7 +18,6 @@ import { CLIENT_SITE_DATA } from "../data/clientSites";
 /* ---------------------------------- */
 
 const CATEGORY_IDS = [
-  "all",
   "platform",
   "portfolio",
   "ecommerce",
@@ -730,7 +729,7 @@ export default function Projects() {
     [t],
   );
 
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState(CATEGORY_IDS[0]);
   const deferredFilter = useDeferredValue(filter); // الزرار بيتلوّن فوراً والكروت بعده (INP)
   const [selectedImage, setSelectedImage] = useState(null);
   const [previewProject, setPreviewProject] = useState(null);
@@ -743,16 +742,13 @@ export default function Projects() {
   const projects = useMemo(() => buildProjects(t), [t]);
 
   const counts = useMemo(() => {
-    const c = { all: projects.length };
+    const c = {};
     for (const p of projects) c[p.category] = (c[p.category] || 0) + 1;
     return c;
   }, [projects]);
 
   const visible = useMemo(
-    () =>
-      deferredFilter === "all"
-        ? projects
-        : projects.filter((p) => p.category === deferredFilter),
+    () => projects.filter((p) => p.category === deferredFilter),
     [projects, deferredFilter],
   );
 
@@ -783,7 +779,7 @@ export default function Projects() {
           aria-label={t("ui.tabsLabel")}
           className="mb-10 flex gap-2.5 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible [scrollbar-width:none]"
         >
-          {CATEGORY_IDS.filter((id) => id === "all" || counts[id]).map((id) => (
+          {CATEGORY_IDS.filter((id) => counts[id]).map((id) => (
             <button
               key={id}
               type="button"

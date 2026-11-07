@@ -36,8 +36,8 @@ export default function Home() {
         <Hero />
         <Brands />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Experience />
         <Contact />
         <Footer />
