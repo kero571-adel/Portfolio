@@ -14,6 +14,21 @@
     "closeMenu": "Close menu",
     "openMenu": "Open menu"
   },
+  "robot": {
+  "greeting": "Welcome! What would you like to know about me first?",
+  "tap": "Tap here to choose ↓",
+  "open": "Open guide menu",
+  "close": "Close guide menu",
+  "hide": "Hide guide",
+  "dismiss": "Dismiss message",
+  "items": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Career",
+    "contact": "Contact"
+  }
+},
   "hero": {
     "greeting": "I'm",
     "name": "Keroles Adel",
